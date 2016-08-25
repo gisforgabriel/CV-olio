@@ -1,8 +1,9 @@
 # CV-olio
 
-A Jekyll template for a simple two page CV &amp; portfolio website, which is compatible with all modern browsers.
+A Jekyll template for a simple two page CV &amp; portfolio website. It is compatible with all modern browsers and will be seen in all its glory by those browsing without [NoScript](https://noscript.net/) et al.
 
 - responsive
+- uses [golden ratio](https://en.wikipedia.org/wiki/Golden_ratio) where appropriate
 - no CSS frameworks
 - no external dependencies
 - no JavaScript
@@ -44,6 +45,7 @@ Option | Description | Required | Default | Notes
 
 ## To do
 
+- [ ] Fix inline font loading as external request
 - [ ] Build demo
 - [ ] Make Liquid tags more elegant
 - [ ] Tidy up media queries
