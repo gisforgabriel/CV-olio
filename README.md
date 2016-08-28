@@ -12,6 +12,10 @@ A Jekyll template for a simple two page CV &amp; portfolio website. It is compat
 - inline SVG icons (rather than icon fonts)
 - custom CSS for printing CV page
 
+Demo site - https://gisforgabriel.github.io/CV-olio/
+
+[![Build Status](https://travis-ci.org/gisforgabriel/CV-olio.svg?branch=master)](https://travis-ci.org/gisforgabriel/CV-olio)
+
 ## Customisation
 
 ### _config.yml
