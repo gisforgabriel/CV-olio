@@ -1,0 +1,55 @@
+---
+---
+// Golden ratio
+$golden-ratio: 1.618;
+$golden-ratio-unit: 1.618em;
+$golden-ratio-1: $golden-ratio-unit * 1;
+$golden-ratio-2: $golden-ratio-unit * 2;
+$golden-ratio-3: $golden-ratio-unit * 3;
+$golden-ratio-10: $golden-ratio-unit * 10;
+
+// Background setup
+@import 'patternbolt';
+$pattern-type: '{{ site.pattern-style }}';
+$pattern-size: $golden-ratio-unit * {{ site.pattern-size }};
+$pattern-background-colour: {{ site.pattern-background }};
+$pattern-foreground-colour: {{ site.pattern-foreground }};
+$pattern-opacity: 1;
+$pattern-mask: none;
+$pattern-offset: $pattern-size / 4;
+
+// Typography
+$title-font-stack: 'loraregular', serif;
+@import 'title-font';
+$body-font-stack: 'muliextralight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+@import 'body-font';
+$font-size-large: 16px;
+$font-size-medium: 14px;
+$font-size-small: 12px;
+
+// CV setup
+$blockquote-bullet-style: "\00BB";
+
+// Page setup
+$max-content-width: 800px;
+$content-padding: $golden-ratio-2;
+$total-content-padding-width: 2 * 2 * $golden-ratio;
+$screen-small: 360px;
+$screen-medium: $max-content-width + ($total-content-padding-width * $font-size-medium);
+$screen-large: 1px;
+$page-colour: white;
+$text-colour: rgb(20, 20, 20);
+$decoration-colour: silver;
+$decoration-thickness: 1px;
+@import 'general';
+
+// Portfolio setup
+$transition-effect: 0.3s ease-in-out;
+@import 'portfolio';
+
+// Media queries
+@import 'media-queries';
+@import 'print';
+
+//Menu
+@import 'menu';

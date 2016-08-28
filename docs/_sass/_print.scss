@@ -1,0 +1,31 @@
+$remove-none: none !important;
+$remove-0: 0 !important;
+
+@media print {
+    html {
+        background: $remove-none;
+        padding: $remove-0;
+        font-size: 12px;
+    }
+
+    body {
+        padding: $remove-0;
+    }
+
+    blockquote  {
+        margin-left: $remove-0;
+        border-left: $remove-0;
+    }
+
+    a {
+        border-bottom: $remove-none;
+    }
+    
+    .menu {
+        display: $remove-none;
+    }
+
+    .page-break {
+        margin-top: 100px;
+    }
+}

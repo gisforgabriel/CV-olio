@@ -1,0 +1,35 @@
+body {
+    font-size: $font-size-small;
+}
+
+    .portfolio-item:hover {
+        height: 35em;
+    }
+
+@media only screen and (min-width: $screen-small + 1) {
+    body {
+        font-size: $font-size-medium;
+    }
+
+    .portfolio-item:hover {
+        height: 37em;
+    }
+
+}
+
+@media only screen and (min-width: $screen-medium + 1) {
+    body {
+        font-size: $font-size-large;
+        padding: $golden-ratio-3;
+    }
+
+    .portfolio-item:hover {
+        height: 24.27em;
+    }
+}
+
+@media screen and (min-width: 955px) {
+    html {
+        padding: 4em 0;
+    }
+}

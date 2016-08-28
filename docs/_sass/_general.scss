@@ -1,0 +1,90 @@
+html {
+    text-rendering: optimizeLegibility;
+    min-width: $screen-small;
+    @include pb($pattern-type, $pattern-size, $pattern-background-colour, $pattern-foreground-colour, $pattern-opacity, $pattern-mask);
+    background-position: $pattern-offset $pattern-offset;
+}
+
+body {
+    margin: 0 auto;
+    background-color: $page-colour;
+    padding: $content-padding;
+    max-width: $max-content-width;
+}
+
+h1, h2, h3, h4, p, ul, li, blockquote {
+    color: $text-colour;
+    margin: 0;
+    font: {
+        family: $body-font-stack;
+        size: 1em;
+        weight: normal;
+    }
+}
+
+h1 {
+    font: {
+        family: $title-font-stack;
+        size: $golden-ratio-3;
+    }
+}
+
+h2 {
+    font-size: $golden-ratio-2;
+    margin: 0.5em 0 0;
+    padding-bottom: 0.1em;
+    border-bottom: 0.01em solid $decoration-colour;
+}
+
+h3 {
+    font-size: 1.25em;
+    line-height: 1.46em;
+    margin: 0.5em 0 0;
+}
+
+h4 {
+    line-height: 2em;
+}
+
+p {
+    line-height: $golden-ratio-1;
+    padding: 1em 0;
+}
+
+ul {
+    padding: 0.5em $golden-ratio-1;
+
+    li {
+        line-height: $golden-ratio-1;
+    
+        ul {
+               padding: 0 $golden-ratio-1;
+        }
+    }
+
+}
+
+blockquote {
+    margin-left: $golden-ratio-1;
+    padding-left: $golden-ratio-1;
+    border-left: $decoration-thickness solid $decoration-colour;
+
+    p {
+        padding: 0;
+    
+        &:before {
+            content: $blockquote-bullet-style;
+            padding-right: 0.5em;
+        }
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: initial;
+    border-bottom: $decoration-thickness dotted $decoration-colour;
+
+    &:hover {
+        border-bottom: $decoration-thickness solid $decoration-colour;
+    }
+}
