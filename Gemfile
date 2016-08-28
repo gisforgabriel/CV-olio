@@ -24,6 +24,4 @@ ruby RUBY_VERSION
 # end
 
 # for Travis
-source 'https://rubygems.org'
-
 gem 'github-pages', group: :jekyll_plugins
