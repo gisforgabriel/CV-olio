@@ -11,7 +11,7 @@ pattern-foreground: cyan
 pattern-size: 5
 
 # Build settings
-exclude: [".rvmrc", ".rbenv-version", "ReadMe.md", "Rakefile", "changelog.md", "Makefile", "License.md", "example/R", "Gemfile", "Gemfile.lock"]
+exclude: [".rvmrc", ".rbenv-version", "ReadMe.md", "Rakefile", "Makefile",  "Gemfile", "Gemfile.lock", "vendor"]
 markdown: kramdown
 kramdown:
   auto_ids: false
