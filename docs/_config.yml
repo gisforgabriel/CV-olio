@@ -11,6 +11,7 @@ pattern-foreground: seagreen
 pattern-size: 5
 
 # Build settings
+exclude: [".rvmrc", ".rbenv-version", "ReadMe.md", "Rakefile", "changelog.md", "Makefile", "License.md", "example/R", "Gemfile", "Gemfile.lock"]
 markdown: kramdown
 kramdown:
   auto_ids: false
