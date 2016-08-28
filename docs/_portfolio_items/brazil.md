@@ -4,7 +4,7 @@ employer: Embassy International Pictures
 image: 
 skill: directing, writing
 link: http://www.imdb.com/title/tt0088846/
-link_text: IMDb
+link-text: IMDb
 display-order: 2
 ---
 

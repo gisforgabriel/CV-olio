@@ -4,7 +4,7 @@ employer: Rhino Films & Summit Entertainment
 image: 
 skill: directing, writing
 link: http://www.imdb.com/title/tt0120669/
-link_text: IMDb
+link-text: IMDb
 display-order: 1
 ---
 
