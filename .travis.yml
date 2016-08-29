@@ -1,4 +1,10 @@
 language: ruby
+
 rvm:
 - 2.1
-script: "cd docs && bundle install && bundle exec jekyll build"
+
+script: "cd docs && bundle install && bundle exec jekyll build && bundle exec htmlproofer ./_site"
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
