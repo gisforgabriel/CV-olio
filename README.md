@@ -20,16 +20,16 @@ Demo site - https://gisforgabriel.github.io/CV-olio/
 
 ### _config.yml
 
-Option | Description | Required | Notes
------- | ----------- | :------: | -----
-`owner` | Your full name | :white_check_mark: | used in page titles
-`github` | Your Github username (without the @) | | used in navigation menu
-`baseurl` | | :white_check_mark: | see [Serve Command Options](http://jekyllrb.com/docs/configuration/#serve-command-options) in the docs
-`url` | | :white_check_mark: | 
-`pattern-style` | Your prefered pattern style | | used for the background in large viewports
-`pattern-foreground` | Colour of pattern itself | | use CSS [named colours](http://www.w3schools.com/colors/colors_names.asp), or hex values
-`pattern-background` | Colour of pattern background | | use CSS [named colours](http://www.w3schools.com/colors/colors_names.asp), or hex values
-`pattern-size` | Width and height of individual pattern tiles | | use integers (compiles to multiples of `em`)
+Option | Description | Required | Default | Notes
+------ | ----------- | :------: | ------- | -----
+`owner` | Your full name | :white_check_mark: | | used in page titles
+`github` | Your Github username (without the @) | | | used in navigation menu
+`baseurl` | | :white_check_mark: | | see [Serve Command Options](http://jekyllrb.com/docs/configuration/#serve-command-options) in the docs
+`url` | | :white_check_mark: | | 
+`pattern-style` | Your prefered pattern style | | `none` | used for the background in large viewports
+`pattern-foreground` | Colour of pattern itself | | `black` | use CSS [named colours](http://www.w3schools.com/colors/colors_names.asp), or hex values
+`pattern-background` | Colour of pattern background | | `white` | use CSS [named colours](http://www.w3schools.com/colors/colors_names.asp), or hex values
+`pattern-size` | Width and height of individual pattern tiles | | `1` | use integers (compiles to multiples of `em`)
 
 ### Portfolio items
 
@@ -47,14 +47,18 @@ Option | Description | Required | Default | Notes
 
 ¹ Not yet working
 
+### Favicon
+
+Edit `/_includes/favicon.html` to either use a base64 encoded favicon or link to an external file.
+
 ## To do
 
 - [ ] Fix inline font loading as external request
-- [ ] Build demo
+- [x] Build demo
 - [ ] Make Liquid tags more elegant
 - [ ] Tidy up media queries
 - [ ] Extract more variables from SASS
-- [ ] Set pattern defaults
+- [x] Set pattern defaults
 - [ ] Debug menu flow
 - [ ] Custom 404 page
 - [ ] Offer option of extended character set in title font
