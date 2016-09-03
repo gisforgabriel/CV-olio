@@ -33,7 +33,7 @@ Option | Description | Required | Default | Notes
 
 ### Portfolio items
 
-Item descriptions are simply taken from the markdown beneath the YAML.
+Item descriptions are simply taken from the Markdown beneath the YAML.
 
 Option | Description | Required | Default | Notes
 ------ | ----------- | :------: | ------- | -----
@@ -63,7 +63,7 @@ Edit `/_includes/favicon.html` to either use a base64 encoded favicon or link to
 - [ ] Custom 404 page
 - [ ] Offer option of extended character set in title font
 - [ ] Offer option to use standard favicon
-- [ ] Offer SEO options: `alt` tags, meta description, etc
+- [ ] Offer SEO options: `alt` tags, meta description, structured data
 - [ ] Offer more social media options
 - [ ] Offer high DPI image options with media query
 - [ ] Check caniuse.com for official browser support

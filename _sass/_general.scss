@@ -1,8 +1,6 @@
 html {
     text-rendering: optimizeLegibility;
     min-width: $screen-small;
-    @include pb($pattern-type, $pattern-size, $pattern-background-colour, $pattern-foreground-colour, $pattern-opacity, $pattern-mask);
-    background-position: $pattern-offset $pattern-offset;
 }
 
 body {

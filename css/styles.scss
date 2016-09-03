@@ -12,6 +12,7 @@ $golden-ratio-10: $golden-ratio-unit * 10;
 {% if site.pattern-style == empty %}
 {% else %}
 @import 'patternbolt';
+@import 'pattern';
 $pattern-type: '{{ site.pattern-style }}';
 $pattern-size: $golden-ratio-unit * {% if site.pattern-size == empty %}1{% else %}{{ site.pattern-size }}{% endif %};
 $pattern-background-colour: {% if site.pattern-background == empty %}white{% else %}{{ site.pattern-background }}{% endif %};
