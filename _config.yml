@@ -1,6 +1,5 @@
-# Site settings
+# Site settings - leave values empty if not required
 owner: Terry Gilliam
-# Leave `github` empty if not needed
 github: gisforgabriel
 baseurl: "/CV-olio/"
 url: "https://gisforgabriel.github.io/"
@@ -9,6 +8,7 @@ pattern-style: candy-b
 pattern-background: darkslategray
 pattern-foreground: cyan
 pattern-size: 5
+seo: true
 
 # Build settings
 exclude: ["ReadMe.md", "Gemfile", "Gemfile.lock", "vendor"]
