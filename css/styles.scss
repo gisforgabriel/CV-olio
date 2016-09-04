@@ -10,6 +10,9 @@ $golden-ratio-10: $golden-ratio-unit * 10;
 
 // Background setup
 {% if site.pattern-style == empty %}
+html {
+    background-color: white;
+}
 {% else %}
 @import 'patternbolt';
 @import 'pattern';
