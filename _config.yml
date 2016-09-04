@@ -8,7 +8,7 @@ pattern-style: candy-b
 pattern-background: darkslategray
 pattern-foreground: cyan
 pattern-size: 5
-seo: true
+#seo: true
 
 # Build settings
 exclude: ["ReadMe.md", "Gemfile", "Gemfile.lock", "vendor"]
@@ -19,3 +19,4 @@ sass:
   sass_dir: _sass
 collections:
   portfolio_items:
+  cv_items:
