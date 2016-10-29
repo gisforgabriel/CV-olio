@@ -7,7 +7,7 @@
 <body>
 {% include menu.html %}
 {{ content }}
-    {% if cv_items.category = "Work Experience" %}
+    {% if cv_items.category = 'Work Experience' %}
         {% assign display_order = site.cv_items | sort: "display-order" %}
             <h2>Work Experience</h2>
             {% assign display_order = site.cv_items | sort "display-order" %}
@@ -20,7 +20,7 @@
                 <h4>{{ cv_item.started }} - {{ cv_item.ended }}</h4>
                 {{ cv_item.content }}
             {% endfor %}
-    {% elsif cv_items.category = "Education" %}
+    {% elsif cv_items.category = 'Education' %}
         {% assign display_order = site.cv_items | sort: "display-order" %}
             <h2>Education</h2>
             {% assign display_order = site.cv_items | sort "display-order" %}
@@ -35,7 +35,7 @@
                 <h4>{{ cv_item.started }} - {{ cv_item.ended }}</h4>
                 {{ cv_item.content }}
             {% endfor %}
-    {% elsif cv_items.category = "Skills" %}
+    {% elsif cv_items.category = 'Skills' %}
         {% assign display_order = site.cv_items | sort: "display-order" %}
             <h2>Skills</h2>
             {% assign display_order = site.cv_items | sort "display-order" %}
