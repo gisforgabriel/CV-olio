@@ -60,7 +60,7 @@ Edit `/_includes/favicon.html` to either use a base64 encoded favicon or link to
 - [ ] Extract more variables from SASS
 - [x] Set pattern defaults
 - [ ] Debug menu flow
-- [ ] Custom 404 page
+- [x] Custom 404 page
 - [ ] Offer option of extended character set in title font
 - [ ] Offer option to use standard favicon
 - [ ] Offer SEO options: `alt` tags, meta description, structured data
