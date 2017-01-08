@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include head.html %}
+    {% include favicon.html %}
+</head>
+<body>
+{% include menu.html %}
+{{ content }}
+    {% unless page.name == "404" %}
+        {% if cv_items.category == 'Work Experience' %}
+            <h2>Work Experience</h2>
+            {% assign display_order = site.cv_items | sort "display-order" %}
+            {% for cv_item in display_order %}
+                <h3>
+                    {% if cv_item.employer-link != empty %}<a href="{{ cv.item.employer-link }}">{{ cv_item.employer }}</a>
+                    {% else %}{{ cv_item.employer }}
+                    {% endif %} | {{ cv_item.role }}
+                </h3>
+                <h4>{{ cv_item.started }} - {{ cv_item.ended }}</h4>
+                {{ cv_item.content }}
+            {% endfor %}
+        {% elsif cv_items.category == 'Education' %}
+            <h2>Education</h2>
+            {% assign display_order = site.cv_items | sort "display-order" %}
+            {% for cv_item in display_order %}
+                <h3>
+                    {% if cv_item.employer-link != empty %}<a href="{{ cv.item.employer-link }}">{{ cv_item.employer }}</a>
+                    {% else %}{{ cv_item.employer }}
+                    {% endif %}
+                    {% if cv_item.role != empty %} | {{ cv_item.role }}
+                    {% endif %}
+                </h3>
+                <h4>{{ cv_item.started }} - {{ cv_item.ended }}</h4>
+                {{ cv_item.content }}
+            {% endfor %}
+        {% elsif cv_items.category == 'Skills' %}
+            <h2>Skills</h2>
+            {% assign display_order = site.cv_items | sort "display-order" %}
+                {% for cv_item in display_order %}
+                    {% if cv_item.employer != empty %}
+                    <h3>
+                        {% if cv_item.employer-link != empty %}<a href="{{ cv.item.employer-link }}">{{ cv_item.employer }}</a>
+                        {% else %}{{ cv_item.employer }}
+                        {% endif %} | {{ cv_item.role }}
+                    </h3>
+                    {% endif %}
+                <h4>{{ cv_item.started }} - {{ cv_item.ended }}</h4>
+                {{ cv_item.content }}
+            {% endfor %}
+        {% endif %}
+    {% endunless %}
+</body>
+</html>
