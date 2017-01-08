@@ -55,18 +55,22 @@ Edit `/_includes/favicon.html` to either use a base64 encoded favicon or link to
 
 - [ ] Fix inline font loading as external request
 - [x] Build demo
+- [ ] Rebuild demo on repo update
 - [ ] Make Liquid tags more elegant
 - [ ] Tidy up media queries
 - [ ] Extract more variables from SASS
 - [x] Set pattern defaults
-- [ ] Debug menu flow
+- [ ] Debug jerky menu animation
 - [x] Custom 404 page
 - [ ] Offer option of extended character set in title font
 - [ ] Offer option to use standard favicon
-- [ ] Offer SEO options: `alt` tags, meta description, structured data
+- [ ] Offer SEO options
+    - [ ] `aria-label` for portfolio images (no `alt` tags)
+    - [ ] meta description
+    - [ ] structured data (requires strict mapping of CV data to schema.org types)
 - [ ] Offer more social media options
 - [ ] Offer high DPI image options with media query
-- [ ] Check caniuse.com for official browser support
+- [ ] Reference caniuse.com for definitive compatiblity information
 
 ## Credits
 
