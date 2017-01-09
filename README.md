@@ -51,17 +51,9 @@ Option | Description | Required | Default | Notes
 
 Edit `/_includes/favicon.html` to either use a base64 encoded favicon or link to an external file.
 
-## To do
-
-- [ ] Fix inline font loading as external request
-- [ ] Offer option of extended character set in title font
-- [ ] Offer option to use standard favicon
-- [ ] Offer high DPI image options with media query
-- [ ] Reference caniuse.com for definitive compatiblity information
-
 ## Credits
 
-Many thanks to the people behind the projects this repository relies on:
+Many thanks to the people behind the projects this project relies on:
 
 - [PatternBolt](https://github.com/buseca/patternbolt) - Ruggero Motta, Martin Iturrieta (The MIT License)
 - [Lora](https://github.com/cyrealtype/Lora-Cyrillic) - Olga Karpushina, Alexei Vanyashin (SIL Open Font License)
