@@ -5,31 +5,39 @@
     {% include favicon.html %}
 </head>
 <body>
-{% include menu.html %}
-{{ content }}
-    <div class="portfolio-container">
-        {% assign display_order = site.portfolio_items | sort: "display-order" %}
-        {% for portfolio_item in display_order %}
-        <div class="portfolio-item" style="background-image:url(/images/{{ portfolio_item.path | remove: '_portfolio_items/' | remove: '.md' }}.jpg);">
-            <div class="portfolio-item-title">
-                <h2><a href="{{ portfolio_item.link }}">{{ portfolio_item.title }}</a></h2>
-            </div>
-            <div class="portfolio-item-overlay">
-                <div class="portfolio-item-content">
-                    <h2><a href="{{ portfolio_item.link }}">{{ portfolio_item.title }}</a></h2>              
-                    {% if portfolio_item.employer != empty %}
-                    <h3>{{ portfolio_item.employer }}</h3>
-                    {% endif %}
-                    {{ portfolio_item.content }}
-                    {% if portfolio_item.link != empty %}
-                    <p class="portfolio-item-link"><svg id="icon-link" width="48" height="48" viewBox="0 0 48 48" x="256" y="0">
-    <path d="M18.862 35.258l-1.944 1.932c-1.682 1.668-4.423 1.668-6.108 0-0.806-0.802-1.25-1.87-1.25-3.005s0.446-2.198 1.25-3.005l7.152-7.092c1.481-1.471 4.27-3.636 6.302-1.62 0.934 0.926 2.438 0.922 3.367-0.012 0.924-0.934 0.919-2.441-0.014-3.365-3.451-3.427-8.558-2.794-13.006 1.62l-7.152 7.094c-1.716 1.702-2.659 3.97-2.659 6.379 0 2.414 0.946 4.678 2.659 6.379 1.766 1.752 4.085 2.63 6.406 2.63s4.642-0.876 6.406-2.63l1.946-1.932c0.934-0.924 0.938-2.429 0.012-3.36-0.929-0.931-2.434-0.936-3.367-0.014zM40.538 7.697c-3.713-3.682-8.902-3.881-12.334-0.473l-2.422 2.405c-0.934 0.926-0.941 2.431-0.014 3.362 0.926 0.934 2.431 0.938 3.365 0.012l2.424-2.402c1.776-1.766 4.106-1.034 5.63 0.473 0.806 0.804 1.253 1.87 1.253 3.005s-0.446 2.201-1.253 3.002l-7.632 7.57c-3.49 3.458-5.126 1.838-5.825 1.145-0.934-0.926-2.438-0.919-3.362 0.012-0.926 0.934-0.922 2.441 0.012 3.362 1.603 1.589 3.432 2.376 5.347 2.376 2.345 0 4.824-1.181 7.183-3.521l7.632-7.567c1.709-1.704 2.657-3.97 2.657-6.379 0-2.412-0.948-4.678-2.662-6.382z"></path>
-    </svg> <a href="{{ portfolio_item.link }}">{% if portfolio_item.link-text != empty %}{{ portfolio_item.link-text }}{% else %}{{ portfolio_item.link }}{% endif %}</a></p>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
+    {% include menu.html %}
+    <svg>
+        <symbol id="icon-link" width="48" height="48" viewBox="0 0 48 48" x="256" y="0">
+            <desc>Link icon</desc>
+            <path d="M18.862 35.258l-1.944 1.932c-1.682 1.668-4.423 1.668-6.108 0-0.806-0.802-1.25-1.87-1.25-3.005s0.446-2.198 1.25-3.005l7.152-7.092c1.481-1.471 4.27-3.636 6.302-1.62 0.934 0.926 2.438 0.922 3.367-0.012 0.924-0.934 0.919-2.441-0.014-3.365-3.451-3.427-8.558-2.794-13.006 1.62l-7.152 7.094c-1.716 1.702-2.659 3.97-2.659 6.379 0 2.414 0.946 4.678 2.659 6.379 1.766 1.752 4.085 2.63 6.406 2.63s4.642-0.876 6.406-2.63l1.946-1.932c0.934-0.924 0.938-2.429 0.012-3.36-0.929-0.931-2.434-0.936-3.367-0.014zM40.538 7.697c-3.713-3.682-8.902-3.881-12.334-0.473l-2.422 2.405c-0.934 0.926-0.941 2.431-0.014 3.362 0.926 0.934 2.431 0.938 3.365 0.012l2.424-2.402c1.776-1.766 4.106-1.034 5.63 0.473 0.806 0.804 1.253 1.87 1.253 3.005s-0.446 2.201-1.253 3.002l-7.632 7.57c-3.49 3.458-5.126 1.838-5.825 1.145-0.934-0.926-2.438-0.919-3.362 0.012-0.926 0.934-0.922 2.441 0.012 3.362 1.603 1.589 3.432 2.376 5.347 2.376 2.345 0 4.824-1.181 7.183-3.521l7.632-7.567c1.709-1.704 2.657-3.97 2.657-6.379 0-2.412-0.948-4.678-2.662-6.382z"></path>
+        </symbol>
+    </svg>
+    <main>
+        <header>
+        {{ content }}
+        </header>
+        <section class="portfolio-container">
+            {% assign display_order = site.portfolio_items | sort: "display-order" %}
+            {% for portfolio_item in display_order %}
+                <article class="portfolio-item" style="background-image:url(/images/{{ portfolio_item.path | remove: '_portfolio_items/' | remove: '.md' }}.jpg);">
+                    <summary class="portfolio-item-title">
+                        <h2><a href="{{ portfolio_item.link }}">{{ portfolio_item.title }}</a></h2>
+                    </summary>
+                    <details class="portfolio-item-overlay">
+                        <div class="portfolio-item-content">
+                            <h2><a href="{{ portfolio_item.link }}">{{ portfolio_item.title }}</a></h2>              
+                            {% if portfolio_item.employer != empty %}
+                                <h3>{{ portfolio_item.employer }}</h3>
+                            {% endif %}
+                            {{ portfolio_item.content }}
+                            {% if portfolio_item.link != empty %}
+                                <p class="portfolio-item-link"><svg><use xlink:href="#icon-link"/></svg> <a href="{{ portfolio_item.link }}">{% if portfolio_item.link-text != empty %}{{ portfolio_item.link-text }}{% else %}{{ portfolio_item.link }}{% endif %}</a></p>
+                            {% endif %}
+                        </div>
+                    </details>
+                </article>
+            {% endfor %}
+        </section>
+    </main>
 </body>
 </html>
