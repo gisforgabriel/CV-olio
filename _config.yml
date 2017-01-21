@@ -8,6 +8,7 @@ pattern-style: candy-b
 pattern-background: darkslategray
 pattern-foreground: cyan
 pattern-size: 5
+language: en
 #seo: true
 
 # Build settings
