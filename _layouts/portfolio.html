@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-{% if site.language == empty %}
-<html lang="en">
-{% else %}
-<html lang="{{ site.language }}">
-{% endif %}
-<head>
-    {% include head.html %}
-    {% include favicon.html %}
-</head>
-<body>
-    {% include menu.html %}
+{% include before_main.html %}
     <svg>
         <symbol id="icon-link" width="48" height="48" viewBox="0 0 48 48" x="256" y="0">
             <desc>Link icon</desc>
@@ -43,5 +32,4 @@
             {% endfor %}
         </section>
     </main>
-</body>
-</html>
+{% include after_main.html %}
