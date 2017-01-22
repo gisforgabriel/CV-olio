@@ -8,7 +8,7 @@ permalink: sitemap.xml
   {% for page in site.pages %}
     {% if page.layout == "standard" or page.layout == "portfolio" %}
     <url>
-      <loc>{{ site.url }}{{ page.url }}</loc>
+      <loc>{{ site.url }}{{ page.path }}</loc>
       <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>

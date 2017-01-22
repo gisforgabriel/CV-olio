@@ -3,8 +3,7 @@ layout: null
 permalink: robots.txt
 ---
 User-agent: *
-{% if site.seo == true %}
-Allow: /
-{% else %}
-Disallow: /
+{% if site.seo == true %}Allow: /
+{% else %}Disallow: /
 {% endif %}
+Sitemap: {{ url }}sitemap.xml
