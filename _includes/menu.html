@@ -5,9 +5,9 @@
     {% for page in site.pages %}
       {% case page.layout %}
         {% when 'standard' %}
-          <li><a href="{{ site.baseurl }}{{ page.url }}"><span class="bullet">»</span>{{ page.title }}</a></li>
+          <li><a href="{{ site.baseurl }}{{ page.path }}"><span class="bullet">»</span>{{ page.title }}</a></li>
         {% when 'portfolio' %}
-          <li><a href="{{ site.baseurl }}{{ page.url }}"><span class="bullet">»</span>{{ page.title }}</a></li>
+          <li><a href="{{ site.baseurl }}{{ page.path }}"><span class="bullet">»</span>{{ page.title }}</a></li>
       {% endcase %}
     {% endfor %}
     {% if site.github != empty %}
