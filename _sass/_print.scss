@@ -12,6 +12,14 @@ $remove-0: 0 !important;
         padding: $remove-0;
     }
 
+    h2 {
+        page-break-after: avoid;
+    }
+
+    article {
+        page-break-inside: avoid;
+    }
+
     blockquote  {
         margin-left: $remove-0;
         border-left: $remove-0;
