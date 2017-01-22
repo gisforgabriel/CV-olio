@@ -2,12 +2,17 @@
   <div class="menu-icon">+</div>
   <nav class="menu-nav">
     <ul>
-      {% for page in site.html_pages %}
-        <li><a href="{{ page.url }}"><span class="bullet">»</span>{{ page.title }}</a></li>
-      {% endfor %}
-      {% if site.github != empty %}
-        <li><a href="https://github.com/{{ site.github }}/"><span class="bullet">»<svg width="48" height="48" viewBox="0 0 48 48" x="512" y="0"><path d="M31.632 27.142c-1.723 0-3.12 1.937-3.12 4.318 0 2.386 1.397 4.322 3.12 4.322s3.12-1.937 3.12-4.322c-0.002-2.381-1.397-4.318-3.12-4.318zM42.494 15.902c0.358-0.876 0.372-5.854-1.524-10.622 0 0-4.346 0.478-10.922 4.992-1.38-0.384-3.715-0.571-6.046-0.571-2.335 0-4.668 0.187-6.048 0.571-6.578-4.514-10.925-4.992-10.925-4.992-1.894 4.769-1.874 9.746-1.522 10.622-2.227 2.419-3.588 5.326-3.588 9.29 0 17.246 14.311 17.522 17.921 17.522 0.821 0 2.443 0.005 4.162 0.005 1.716 0 3.341-0.005 4.157-0.005 3.614 0 17.921-0.276 17.921-17.522 0-3.965-1.358-6.871-3.586-9.29zM24.067 40.596h-0.134c-9.050 0-16.102-1.078-16.102-9.876 0-2.11 0.744-4.063 2.513-5.686 2.945-2.705 7.932-1.274 13.589-1.274 0.024 0 0.048 0 0.070 0 0.024 0 0.043 0 0.065 0 5.657 0 10.646-1.43 13.594 1.274 1.764 1.622 2.508 3.576 2.508 5.686 0 8.798-7.049 9.876-16.102 9.876zM16.37 27.142c-1.723 0-3.12 1.937-3.12 4.318 0 2.386 1.397 4.322 3.12 4.322 1.726 0 3.122-1.937 3.122-4.322 0-2.381-1.397-4.318-3.122-4.318z"></path></svg></span></a></li>
-      {% endif %}
+    {% for page in site.pages %}
+      {% case page.layout %}
+        {% when 'standard' %}
+          <li><a href="{{ site.baseurl }}{{ page.url }}"><span class="bullet">»</span>{{ page.title }}</a></li>
+        {% when 'portfolio' %}
+          <li><a href="{{ site.baseurl }}{% link page.url %}"><span class="bullet">»</span>{{ page.title }}</a></li>
+      {% endcase %}
+    {% endfor %}
+    {% if site.github != empty %}
+      <li><a href="https://github.com/{{ site.github }}/"><span class="bullet">»{% include icon_github.html %}</span></a></li>
+    {% endif %}
     </ul>
   </nav>
 </div>
