@@ -1,0 +1,10 @@
+---
+layout: null
+permalink: robots.txt
+---
+User-agent: *
+{% if site.seo == true %}
+Allow: /
+{% else %}
+Disallow: /
+{% endif %}
