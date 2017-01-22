@@ -12,7 +12,7 @@ A Jekyll template for a simple two page CV &amp; portfolio website. It is compat
 - inline SVG icons (rather than icon fonts)
 - custom CSS for printing CV page
 
-Demo site - https://gisforgabriel.github.io/CV-olio/
+Demo site - https://cv-olio.netlify.com/cv
 
 [![Build Status](https://travis-ci.org/gisforgabriel/CV-olio.svg?branch=master)](https://travis-ci.org/gisforgabriel/CV-olio)
 
@@ -24,12 +24,13 @@ Option | Description | Required | Default | Notes
 ------ | ----------- | :------: | ------- | -----
 `owner` | Your full name | :white_check_mark: | | used in page titles
 `github` | Your Github username (without the @) | | | used in navigation menu
-`baseurl` | | :white_check_mark: | | see [Serve Command Options](http://jekyllrb.com/docs/configuration/#serve-command-options) in the docs
+`baseurl` | | | | see [Serve Command Options](http://jekyllrb.com/docs/configuration/#serve-command-options) in the docs
 `url` | | :white_check_mark: | | 
 `pattern-style` | Your prefered pattern style | | `none` | used for the background in large viewports
 `pattern-foreground` | Colour of pattern itself | | `black` | use CSS [named colours](http://www.w3schools.com/colors/colors_names.asp), or hex values
 `pattern-background` | Colour of pattern background | | `white` | use CSS [named colours](http://www.w3schools.com/colors/colors_names.asp), or hex values
 `pattern-size` | Width and height of individual pattern tiles | | `1` | use integers (compiles to multiples of `em`)
+`language` | declared language of site | :white_check_mark: | `en` | [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
 
 ### Portfolio items
 
