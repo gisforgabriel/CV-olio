@@ -7,7 +7,7 @@
         {% when 'standard' %}
           <li><a href="{{ site.baseurl }}{{ page.url }}"><span class="bullet">»</span>{{ page.title }}</a></li>
         {% when 'portfolio' %}
-          <li><a href="{{ site.baseurl }}{% link page.url %}"><span class="bullet">»</span>{{ page.title }}</a></li>
+          <li><a href="{{ site.baseurl }}{{ page.url }}"><span class="bullet">»</span>{{ page.title }}</a></li>
       {% endcase %}
     {% endfor %}
     {% if site.github != empty %}
