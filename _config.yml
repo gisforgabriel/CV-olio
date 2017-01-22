@@ -2,7 +2,7 @@
 owner: Terry Gilliam
 github: gisforgabriel
 baseurl: ""
-url: "https://cv-olio.netlify.com/"
+url: "https://cv-olio.netlify.com"
 # Choose `pattern-style` from: china-a, lines-a, lines-b, lines-c, lines-45-a, lines-45-b, lines-45-c, cross-a, cross-b, cross-c, cross-thin-a, cross-thin-b, cross-thin-c, candy-a, candy-b, candy-c (not working), feather
 pattern-style: candy-b
 pattern-background: darkslategray
