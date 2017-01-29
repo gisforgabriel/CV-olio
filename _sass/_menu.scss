@@ -10,7 +10,7 @@ $menu-icon-size: 3em;
         float: right;
         display: block;
         text-align: right;
-        transition: transform $transition-effect, color $transition-effect;
+        transition: transform $transition-effect;
         font-size: $menu-icon-size;
         line-height: 1em;
         cursor: default;
@@ -24,7 +24,6 @@ $menu-icon-size: 3em;
     &:hover {
         .menu-icon {
             transform: rotate(45deg);
-            color: $text-colour
         }
         .menu-nav {
             display: block;
