@@ -8,23 +8,21 @@
             {% assign display_order = site.portfolio_items | sort: "display-order" %}
             {% for portfolio_item in display_order %}
                 <article class="portfolio-item" style="background-image:url(/images/{{ portfolio_item.path | remove: '_portfolio_items/' | remove: '.md' }}.jpg);">
-                    <details>
-                        <summary class="portfolio-item-title">
-                            <h2><a href="{{ portfolio_item.link }}">{{ portfolio_item.title }}</a></h2>
-                        </summary>
-                        <div class="portfolio-item-overlay">
-                            <div class="portfolio-item-content">
-                                <h2><a href="{{ portfolio_item.link }}">{{ portfolio_item.title }}</a></h2>              
-                                {% if portfolio_item.employer != empty %}
-                                    <h3>{{ portfolio_item.employer }}</h3>
-                                {% endif %}
-                                {{ portfolio_item.content }}
-                                {% if portfolio_item .link != empty %}
-                                    <p class="portfolio-item-link"><svg><use xlink:href="#icon-link"/></svg> <a href="{{ portfolio_item.link }}">{% if portfolio_item.link-text != empty %}{{ portfolio_item.link-text }}{% else %}{{ portfolio_item.link }}{% endif %}</a></p>
-                                {% endif %}
-                            </div>
+                    <div class="portfolio-item-title">
+                        <h2><a href="{{ portfolio_item.link }}">{{ portfolio_item.title }}</a></h2>
+                    </div>
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-content">
+                            <h2><a href="{{ portfolio_item.link }}">{{ portfolio_item.title }}</a></h2>              
+                            {% if portfolio_item.employer != empty %}
+                                <h3>{{ portfolio_item.employer }}</h3>
+                            {% endif %}
+                            {{ portfolio_item.content }}
+                            {% if portfolio_item .link != empty %}
+                                <p class="portfolio-item-link"><svg><use xlink:href="#icon-link"/></svg> <a href="{{ portfolio_item.link }}">{% if portfolio_item.link-text != empty %}{{ portfolio_item.link-text }}{% else %}{{ portfolio_item.link }}{% endif %}</a></p>
+                            {% endif %}
                         </div>
-                    </details>
+                    </div>
                 </article>
             {% endfor %}
         </section>
