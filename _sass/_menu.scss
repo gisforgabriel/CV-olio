@@ -48,13 +48,14 @@ $menu-icon-size: 3em;
             list-style-type: none;
             color: $decoration-colour;
             transition: color $transition-effect, fill $transition-effect;
+            width: 100%;
         
             svg {
                 fill: $decoration-colour;
                 width: 1em;
                 height: 1em;
                 padding-left: 0.5em;
-                transform: translate(0px, 0.2em);
+//                transform: translate(0px, 0.1em);
             }
 
             &:hover svg {
