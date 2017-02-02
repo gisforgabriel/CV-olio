@@ -1,6 +1,11 @@
 {% include before_main.html %}
     <main>
         {{ content }}
+        <address>
+            {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}{% endif %}
+            {% if site.telephone %}<br/>{{ site.telephone }}{% endif %}
+            {% if site.address %}<br/>{{ site.address }}{% endif %}
+        </address>
         {% unless page.name == "404" %}
             {% if cv_items.category == 'Work Experience' %}
                 <section>

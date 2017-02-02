@@ -62,19 +62,19 @@ ul {
 
 }
 
-blockquote {
+address {
     margin-left: $golden-ratio-1;
     padding-left: $golden-ratio-1;
     border-left: $decoration-thickness solid $decoration-colour;
 
-    p {
+ /*   p {
         padding: 0;
     
         &:before {
             content: $blockquote-bullet-style;
             padding-right: 0.5em;
         }
-    }
+    } */
 }
 
 a {

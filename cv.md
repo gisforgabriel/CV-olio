@@ -9,12 +9,6 @@ title: CV
 
 I like places where there are people who are different culturally, physically, in every way. And I like to see how they succeed in living together.
 
-> [terry.gilliam@gmail.com](mailto:terry.gilliam@gmail.com)
-
-> +44 (0)207 123 4568
-
-> Highgate, London, UK N6 1MP
-
 ## Professional Experience
 
 ### [Monty Python](http://www.montypython.com) │ Animator/Member
