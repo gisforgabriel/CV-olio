@@ -11,13 +11,9 @@
                     <div class="portfolio-item-overlay">
                         <div class="portfolio-item-content">
                             <h2><a href="{{ portfolio_item.link }}">{{ portfolio_item.title }}</a></h2>              
-                            {% if portfolio_item.employer != empty %}
-                                <h3>{{ portfolio_item.employer }}</h3>
-                            {% endif %}
+                            {% if portfolio_item.employer %}<h3>{{ portfolio_item.employer }}</h3>{% endif %}
                             {{ portfolio_item.content }}
-                            {% if portfolio_item .link != empty %}
-                                <p class="portfolio-item-link"><svg><use xlink:href="#icon-link"/></svg> <a href="{{ portfolio_item.link }}">{% if portfolio_item.link-text != empty %}{{ portfolio_item.link-text }}{% else %}{{ portfolio_item.link }}{% endif %}</a></p>
-                            {% endif %}
+                            {% if portfolio_item.link %}<p class="portfolio-item-link"><svg><use xlink:href="#icon-link"/></svg> <a href="{{ portfolio_item.link }}">{% if portfolio_item.link-text %}{{ portfolio_item.link-text }}{% else %}{{ portfolio_item.link }}{% endif %}</a></p>{% endif %}
                         </div>
                     </div>
                 </article>
