@@ -47,13 +47,7 @@
                     {% assign display_order = site.cv_items | sort "display-order" %}
                     {% for cv_item in display_order %}
                         <article>
-                            {% if cv_item.employer != empty %}
-                            <h3>
-                                {% if cv_item.employer-link != empty %}<a href="{{ cv.item.employer-link }}">{{ cv_item.employer }}</a>
-                                {% else %}{{ cv_item.employer }}
-                                {% endif %} | {{ cv_item.role }}
-                            </h3>
-                            {% endif %}
+                            {% if cv_item.employer %}<h3>{% if cv_item.employer-link %}<a href="{{ cv.item.employer-link }}">{{ cv_item.employer }}</a>{% else %}{{ cv_item.employer }}{% endif %} | {{ cv_item.role }}</h3>{% endif %}
                             <h4><time>{{ cv_item.started }}</time> - <time>{{ cv_item.ended }}</time></h4>
                             {{ cv_item.content }}
                         </article>
