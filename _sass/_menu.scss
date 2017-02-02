@@ -25,12 +25,12 @@ $menu-icon-size: 3em;
         .menu-icon {
             transform: rotate(45deg);
         }
-        .menu-nav {
+        nav {
             display: block;
         }
     }
 
-    nav.menu-nav {
+    nav {
         display: none;
         position: absolute;
         transition: display $transition-effect;
