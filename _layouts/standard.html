@@ -2,7 +2,7 @@
     <main>
         {{ content }}
         <address>
-            {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}{% endif %}
+            {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
             {% if site.telephone %}<br/>{{ site.telephone }}{% endif %}
             {% if site.address %}<br/>{{ site.address }}{% endif %}
         </address>
