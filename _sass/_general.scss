@@ -63,6 +63,7 @@ ul {
 }
 
 address {
+    line-height: $golden-ratio-1;
     margin-left: $golden-ratio-1;
     padding-left: $golden-ratio-1;
     border-left: $decoration-thickness solid $decoration-colour;
