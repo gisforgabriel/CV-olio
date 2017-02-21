@@ -21,7 +21,7 @@ ruby RUBY_VERSION
 # end
 
 # for Travis
-gem 'activesupport', '4.2.7'
+gem 'activesupport', '5.0.1'
 gem "jekyll", "3.4.0" 
 #gem 'github-pages', group: :jekyll_plugins
 gem "html-proofer"
