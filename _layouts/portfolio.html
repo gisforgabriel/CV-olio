@@ -4,7 +4,7 @@
         <section class="portfolio-container">
             {% assign display_order = site.portfolio_items | sort: "display-order" %}
             {% for portfolio_item in display_order %}
-                <article class="portfolio-item" style="background-image:url(/images/{{ portfolio_item.path | remove: '_portfolio_items/' | remove: '.md' }}.jpg);">
+                <article class="portfolio-item" style="background-image:url(/images/{{ portfolio_item.path | remove: '_portfolio_items/' | replace: '.md', '.jpg' }});">
                     <div class="portfolio-item-title">
                         <h2><a href="{{ portfolio_item.link }}">{{ portfolio_item.title }}</a></h2>
                     </div>
