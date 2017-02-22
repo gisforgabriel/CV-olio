@@ -9,7 +9,9 @@ language: en
 #seo: true
 
 # Personal settings
-owner: Terry Gilliam
+first_name: Terry
+middle_names:
+last_name: Gilliam
 github: gisforgabriel
 email: terry.gilliam@gmail.com
 telephone: +44 (0)207 123 4568

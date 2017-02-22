@@ -1,5 +1,6 @@
 {% include before_main.html %}
     <main>
+        <h1>{{ site.first_name }}<br>{{ site.middle_names | append: ' ' }}{{ site.last_name }}</h1>
         {{ content }}
         {% unless page.name == "404" %}
             {% if site.email or site.telephone or site.address %}
