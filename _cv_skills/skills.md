@@ -4,8 +4,6 @@ display-order:
 employer:
 employer-link:
 role:
-started:
-ended:
 ---
 - Animation
 - Drawing

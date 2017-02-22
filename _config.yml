@@ -23,5 +23,10 @@ kramdown:
 sass:
   sass_dir: _sass
 collections:
+  cv_work:
+    position: 1
+  cv_education:
+    position: 2
+  cv_skills:
+    position: 3
   portfolio_items:
-  cv_items:
