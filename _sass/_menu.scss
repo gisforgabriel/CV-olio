@@ -40,8 +40,6 @@ $menu-icon-size: 3em;
         background-color: $page-colour;
         z-index: 2;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-//        border: 1px solid rgba(0,0,0,.15);
-//        border-radius: 4px;
 
         li {
             font-size: $golden-ratio-1;
@@ -55,7 +53,6 @@ $menu-icon-size: 3em;
                 width: 1em;
                 height: 1em;
                 padding-left: 0.5em;
-//                transform: translate(0px, 0.1em);
             }
 
             &:hover svg {

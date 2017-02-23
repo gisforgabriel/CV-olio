@@ -1,5 +1,4 @@
 html {
-//    text-rendering: optimizeLegibility;
     min-width: $screen-small;
 }
 
@@ -69,15 +68,6 @@ address {
     padding-left: $golden-ratio-1;
     border-left: $decoration-thickness solid $decoration-colour;
     font-style: normal;
-
- /*   p {
-        padding: 0;
-    
-        &:before {
-            content: $blockquote-bullet-style;
-            padding-right: 0.5em;
-        }
-    } */
 }
 
 a {
