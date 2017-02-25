@@ -3,7 +3,7 @@ language: ruby
 rvm:
 - 2.1
 
-script: "bundle install && bundle exec jekyll build --verbose --profile  && bundle exec htmlproofer ./_site"
+script: "gem install activesupport && bundle install && bundle exec jekyll build --verbose --profile && bundle exec htmlproofer ./_site"
 
 env:
   global:
