@@ -1,7 +1,7 @@
 language: ruby
 
 rvm:
-- 2.2
+- 2.2.2
 
 script: "gem install activesupport && bundle install && bundle exec jekyll build --verbose --profile && bundle exec htmlproofer ./_site"
 
