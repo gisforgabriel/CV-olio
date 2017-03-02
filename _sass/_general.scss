@@ -9,7 +9,14 @@ body {
     max-width: $max-content-width;
 }
 
-h1, h2, h3, h4, p, ul, li, address {
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+address {
     color: $text-colour;
     margin: 0;
     font: {
