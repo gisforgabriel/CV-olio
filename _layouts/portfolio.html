@@ -5,12 +5,17 @@
             {{ content }}
         </header>
         <section class="portfolio-container">
-            {% assign display_order = site.portfolio_items | sort: "display-order" %}
-            {% for item in display_order %}
+            {% assign sorted_items = site.portfolio_items | sort: "display-order" %}
+            <!--
+            {% for item in sorted_items %}
                 <article class="portfolio-item" style="background-image:url(/images/{{ item.path | remove: '_portfolio_items/' | replace: '.md', '.jpg' }});">
+            -->
+                    <!--
                     <div class="portfolio-item-title">
                         <h2><a href="{{ item.link }}">{{ item.title }}</a></h2>
                     </div>
+                    -->
+            <!--
                     <div class="portfolio-item-overlay">
                         <div class="portfolio-item-content">
                             <h2><a href="{{ item.link }}">{{ item.title }}</a></h2>              
@@ -18,6 +23,17 @@
                             {{ item.content }}
                             {% if item.link %}<p class="portfolio-item-link"><svg><use xlink:href="#icon-link"/></svg> <a href="{{ item.link }}">{% if item.link-text %}{{ item.link-text }}{% else %}{{ item.link }}{% endif %}</a></p>{% endif %}
                         </div>
+                    </div>
+                </article>
+            {% endfor %}
+            -->
+            {% for item in sorted_items %}
+                <article class="portfolio-item, portfolio-item-content" style="background-image:url(/images/{{ item.path | remove: '_portfolio_items/' | replace: '.md', '.jpg' }});" tabindex="{{ forloop.index | plus: 50 }}">
+                    <h2><a href="{{ item.link }}">{{ item.title }}</a></h2>
+                    <div class="hide-text">
+                    {% if item.employer %}<h3>{{ item.employer }}</h3>{% endif %}
+                    {{ item.content }}
+                    {% if item.link %}<p class="portfolio-item-link"><svg><use xlink:href="#icon-link"/></svg> <a href="{{ item.link }}">{% if item.link-text %}{{ item.link-text }}{% else %}{{ item.link }}{% endif %}</a></p>{% endif %}
                     </div>
                 </article>
             {% endfor %}
