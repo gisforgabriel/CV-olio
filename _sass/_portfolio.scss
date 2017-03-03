@@ -1,8 +1,7 @@
-.portfolio-container {
+.portfolio {
     max-width: $max-content-width;
 
     article {
-/*        width: 100%; */
         height: $golden-ratio-10;
         transition: height $transition-effect, filter $transition-effect;
         overflow: hidden;
@@ -57,7 +56,9 @@
         svg {
             width: 1em;
             height: 1em;
-            fill: white;
+            @supports (fill: white) {
+                fill: white
+            }
         }
 
         .hide-text {
@@ -68,7 +69,7 @@
         &:focus {
             height: initial;
             min-height: $golden-ratio-10;
-            filter: grayscale(100%);
+            filter: grayscale(100%) brightness(50%);
         
             .portfolio-item-overlay {
                 opacity: 1;
@@ -104,9 +105,4 @@
             rgba(0, 0, 0, 0.85)
             );
     }
-/*
-    .portfolio-item-content {
-        padding: 1em;
-    }
-*/
 }

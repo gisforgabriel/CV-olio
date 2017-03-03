@@ -4,7 +4,7 @@
             <h1>Portfolio</h1>
             {{ content }}
         </header>
-        <section class="portfolio-container">
+        <section class="portfolio">
             {% assign sorted_items = site.portfolio_items | sort: "display-order" %}
             <!--
             {% for item in sorted_items %}
@@ -28,7 +28,7 @@
             {% endfor %}
             -->
             {% for item in sorted_items %}
-                <article class="portfolio-item, portfolio-item-content" style="background-image:url(/images/{{ item.path | remove: '_portfolio_items/' | replace: '.md', '.jpg' }});" tabindex="{{ forloop.index | plus: 50 }}">
+                <article style="background-image:url(/images/{{ item.path | remove: '_portfolio_items/' | replace: '.md', '.jpg' }});" tabindex="{{ forloop.index | plus: 50 }}">
                     <h2><a href="{{ item.link }}">{{ item.title }}</a></h2>
                     <div class="hide-text">
                     {% if item.employer %}<h3>{{ item.employer }}</h3>{% endif %}
