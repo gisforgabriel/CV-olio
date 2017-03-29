@@ -14,7 +14,7 @@ A Jekyll template for a simple two page CV &amp; portfolio website. It is compat
 
 Demo site - https://cv-olio.netlify.com/cv
 
-[![Build Status](https://travis-ci.org/gisforgabriel/CV-olio.svg?branch=master)](https://travis-ci.org/gisforgabriel/CV-olio)
+[![Build Status](https://semaphoreci.com/api/v1/gisforgabriel/cv-olio/branches/master/badge.svg)](https://semaphoreci.com/gisforgabriel/cv-olio)
 
 ## Customisation
 
