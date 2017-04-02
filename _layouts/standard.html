@@ -24,7 +24,7 @@
                                         {% else %}{{ job.employer }}
                                         {% endif %} | {{ job.role }}
                                     </h3>
-                                    <h4><time datetime="{{ job.start-year }}{% if job.start-month %}-{% if job.start-month < 10 %}0{% endif %}{{ job.start-month}}{% endif %}">{% if job.start-month %}{{ job.start-month}}/{% endif %}{{ job.start-year }}</time> - <time datetime="{{ job.end-year }}{% if job.end-month %}-{% if job.end-month < 10 %}0{% endif %}{{ job.end-month}}{% endif %}">{% if job.end-month %}{{ job.end-month}}/{% endif %}{{ job.end-year }}</time></h4>
+                                    <h4>{% include job_dates.html %}</h4>
                                     {{ job.content }}
                                 </article>
                             {% endfor %}

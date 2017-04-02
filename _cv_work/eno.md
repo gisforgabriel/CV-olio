@@ -6,7 +6,7 @@ employer-link: http://www.eno.org/
 role: Director
 start-month: 05
 start-year: 2010
-end-month: 06
+end-month: 10
 end-year: 2011
 ---
 - Led the development of art direction and set design.
