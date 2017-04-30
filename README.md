@@ -1,6 +1,6 @@
 # CV-olio
 
-A Jekyll template for a simple two page CV &amp; portfolio website. It is compatible with all modern browsers and will be seen in all its glory by those browsing without [NoScript](https://noscript.net/) et al.
+A Jekyll template for a simple two page CV &amp; portfolio website, packed with features and customisation. CV-olio is designed to be compatible with all modern browsers and does not rely on JavaScript. With no external dependencies it can even be distributed on a USB stick.
 
 - responsive
 - uses [golden ratio](https://en.wikipedia.org/wiki/Golden_ratio) where appropriate
@@ -8,9 +8,11 @@ A Jekyll template for a simple two page CV &amp; portfolio website. It is compat
 - no external dependencies
 - no JavaScript
 - fonts embedded in CSS
-- favicon embedded in CSS
+- favicon embedded in CSS (optional)
 - inline SVG icons (rather than icon fonts)
 - custom CSS for printing CV page
+- [schema.org](http://www.schema.org) structured data (optional)
+- optimised for organic search (optional)
 
 Demo site - https://cv-olio.netlify.com/cv
 
