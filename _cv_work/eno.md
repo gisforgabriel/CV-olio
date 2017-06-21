@@ -2,7 +2,7 @@
 category: Professional Experience
 display-order: 2
 employer: English National Opera
-employer-link: http://www.eno.org/
+employer-link: https://www.eno.org/
 role: Director
 start-month: 05
 start-year: 2010
