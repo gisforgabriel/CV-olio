@@ -1,1 +1,73 @@
-<time datetime="{{ job.start-year }}{% case job.start-month %}{% when 1 %}{{ job.start-month | prepend: '-0' }}{% when 2 %}{{ job.start-month | prepend: '-0' }}{% when 3 %}{{ job.start-month | prepend: '-0' }}{% when 4 %}{{ job.start-month | prepend: '-0' }}{% when 5 %}{{ job.start-month | prepend: '-0' }}{% when 6 %}{{ job.start-month | prepend: '-0' }}{% when 7 %}{{ job.start-month | prepend: '-0' }}{% when 8 %}{{ job.start-month | prepend: '-0' }}{% when 9 %}{{ job.start-month | prepend: '-0' }}{% when 10 %}{{ job.start-month | prepend: '-' }}{% when 11 %}{{ job.start-month | prepend: '-' }}{% when 12 %}{{ job.start-month | prepend: '-' }}{% endcase %}">{% case job.start-month %}{% when 1 %}{{ job.start-month | prepend: '0' | append: '/' }}{% when 2 %}{{ job.start-month | prepend: '0' | append: '/' }}{% when 3 %}{{ job.start-month | prepend: '0' | append: '/' }}{% when 4 %}{{ job.start-month | prepend: '0' | append: '/' }}{% when 5 %}{{ job.start-month | prepend: '0' | append: '/' }}{% when 6 %}{{ job.start-month | prepend: '0' | append: '/' }}{% when 7 %}{{ job.start-month | prepend: '0' | append: '/' }}{% when 8 %}{{ job.start-month | prepend: '0' | append: '/' }}{% when 9 %}{{ job.start-month | prepend: '0' | append: '/' }}{% when 10 %}{{ job.start-month | append: '/' }}{% when 11 %}{{ job.start-month | append: '/' }}{% when 12 %}{{ job.start-month | append: '/' }}{% endcase %}{{ job.start-year }}</time> - <time datetime="{{ job.end-year }}{% case job.end-month %}{% when 1 %}{{ job.end-month | prepend: '-0' }}{% when 2 %}{{ job.end-month | prepend: '-0' }}{% when 3 %}{{ job.end-month | prepend: '-0' }}{% when 4 %}{{ job.end-month | prepend: '-0' }}{% when 5 %}{{ job.end-month | prepend: '-0' }}{% when 6 %}{{ job.end-month | prepend: '-0' }}{% when 7 %}{{ job.end-month | prepend: '-0' }}{% when 8 %}{{ job.end-month | prepend: '-0' }}{% when 9 %}{{ job.end-month | prepend: '-0' }}{% when 10 %}{{ job.end-month | prepend: '-' }}{% when 11 %}{{ job.end-month | prepend: '-' }}{% when 12 %}{{ job.end-month | prepend: '-' }}{% endcase %}">{% case job.end-month %}{% when 1 %}{{ job.end-month | prepend: '0' | append: '/' }}{% when 2 %}{{ job.end-month | prepend: '0' | append: '/' }}{% when 3 %}{{ job.end-month | prepend: '0' | append: '/' }}{% when 4 %}{{ job.end-month | prepend: '0' | append: '/' }}{% when 5 %}{{ job.end-month | prepend: '0' | append: '/' }}{% when 6 %}{{ job.end-month | prepend: '0' | append: '/' }}{% when 7 %}{{ job.end-month | prepend: '0' | append: '/' }}{% when 8 %}{{ job.end-month | prepend: '0' | append: '/' }}{% when 9 %}{{ job.end-month | prepend: '0' | append: '/' }}{% when 10 %}{{ job.end-month | append: '/' }}{% when 11 %}{{ job.end-month | append: '/' }}{% when 12 %}{{ job.end-month | append: '/' }}{% endcase %}{{ job.end-year }}</time>
+{%- capture start-datetime -%}
+    {{- job.start-year -}}
+    {%- case job.start-month -%}
+        {%- when 1 -%}{{- job.start-month | prepend: '-0' -}}
+        {%- when 2 -%}{{- job.start-month | prepend: '-0' -}}
+        {%- when 3 -%}{{- job.start-month | prepend: '-0' -}}
+        {%- when 4 -%}{{- job.start-month | prepend: '-0' -}}
+        {%- when 5 -%}{{- job.start-month | prepend: '-0' -}}
+        {%- when 6 -%}{{- job.start-month | prepend: '-0' -}}
+        {%- when 7 -%}{{- job.start-month | prepend: '-0' -}}
+        {%- when 8 -%}{{- job.start-month | prepend: '-0' -}}
+        {%- when 9 -%}{{- job.start-month | prepend: '-0' -}}
+        {%- when 10 -%}{{- job.start-month | prepend: '-' -}}
+        {%- when 11 -%}{{- job.start-month | prepend: '-' -}}
+        {%- when 12 -%}{{- job.start-month | prepend: '-' -}}
+    {%- endcase -%}
+{%- endcapture -%}
+
+{%- capture start-date -%}
+    {%- case job.start-month -%}
+        {%- when 1 -%}{{- job.start-month | prepend: '0' | append: '/' -}}
+        {%- when 2 -%}{{- job.start-month | prepend: '0' | append: '/' -}}
+        {%- when 3 -%}{{- job.start-month | prepend: '0' | append: '/' -}}
+        {%- when 4 -%}{{- job.start-month | prepend: '0' | append: '/' -}}
+        {%- when 5 -%}{{- job.start-month | prepend: '0' | append: '/' -}}
+        {%- when 6 -%}{{- job.start-month | prepend: '0' | append: '/' -}}
+        {%- when 7 -%}{{- job.start-month | prepend: '0' | append: '/' -}}
+        {%- when 8 -%}{{- job.start-month | prepend: '0' | append: '/' -}}
+        {%- when 9 -%}{{- job.start-month | prepend: '0' | append: '/' -}}
+        {%- when 10 -%}{{- job.start-month | append: '/' -}}
+        {%- when 11 -%}{{- job.start-month | append: '/' -}}
+        {%- when 12 -%}{{- job.start-month | append: '/' -}}
+    {%- endcase -%}
+    {{- job.start-year -}}
+{%- endcapture -%}
+
+{%- capture end-datetime -%}
+    {{- job.end-year -}}
+    {%- case job.end-month -%}
+        {%- when 1 -%}{{- job.end-month | prepend: '-0' -}}
+        {%- when 2 -%}{{- job.end-month | prepend: '-0' -}}
+        {%- when 3 -%}{{- job.end-month | prepend: '-0' -}}
+        {%- when 4 -%}{{- job.end-month | prepend: '-0' -}}
+        {%- when 5 -%}{{- job.end-month | prepend: '-0' -}}
+        {%- when 6 -%}{{- job.end-month | prepend: '-0' -}}
+        {%- when 7 -%}{{- job.end-month | prepend: '-0' -}}
+        {%- when 8 -%}{{- job.end-month | prepend: '-0' -}}
+        {%- when 9 -%}{{- job.end-month | prepend: '-0' -}}
+        {%- when 10 -%}{{- job.end-month | prepend: '-' -}}
+        {%- when 11 -%}{{- job.end-month | prepend: '-' -}}
+        {%- when 12 -%}{{- job.end-month | prepend: '-' -}}
+    {%- endcase -%}
+{%- endcapture -%}
+
+{%- capture end-date -%}
+    {%- case job.end-month -%}
+        {%- when 1 -%}{{- job.end-month | prepend: '0' | append: '/' -}}
+        {%- when 2 -%}{{- job.end-month | prepend: '0' | append: '/' -}}
+        {%- when 3 -%}{{- job.end-month | prepend: '0' | append: '/' -}}
+        {%- when 4 -%}{{- job.end-month | prepend: '0' | append: '/' -}}
+        {%- when 5 -%}{{- job.end-month | prepend: '0' | append: '/' -}}
+        {%- when 6 -%}{{- job.end-month | prepend: '0' | append: '/' -}}
+        {%- when 7 -%}{{- job.end-month | prepend: '0' | append: '/' -}}
+        {%- when 8 -%}{{- job.end-month | prepend: '0' | append: '/' -}}
+        {%- when 9 -%}{{- job.end-month | prepend: '0' | append: '/' -}}
+        {%- when 10 -%}{{- job.end-month | append: '/' -}}
+        {%- when 11 -%}{{- job.end-month | append: '/' -}}
+        {%- when 12 -%}{{- job.end-month | append: '/' -}}
+    {%- endcase -%}
+    {{- job.end-year -}}
+{%- endcapture -%}
+
+<time datetime="{{- start-datetime -}}">{{- start-date -}}</time> - <time datetime="{%- end-datetime -%}">{%- end-date -%}</time>
