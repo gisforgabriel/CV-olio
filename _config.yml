@@ -23,6 +23,7 @@ kramdown:
   auto_ids: false
 sass:
   sass_dir: _sass
+  style: compressed
 collections:
   cv_work:
     position: 1
