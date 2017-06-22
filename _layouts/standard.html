@@ -1,65 +1,77 @@
 {% include before_main.html %}
     <main>
-        <h1>{{ site.first_name | append: ' ' }}{{ site.last_name }}</h1>
+        <h1>
+            {{ site.first_name | append: ' ' }}{{ site.last_name }}
+        </h1>
         {{ content }}
-        {% unless page.name == "404" %}
-            {% if site.email or site.telephone or site.address %}
+        {%- unless page.name == "404" -%}
+            {%- if site.email or site.telephone or site.address -%}
                 <address>
-                    {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
-                    {% if site.telephone %}<br/>{{ site.telephone }}{% endif %}
-                    {% if site.address %}<br/>{{ site.address }}{% endif %}
+                    {%- if site.email -%}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{%- endif -%}
+                    {%- if site.telephone -%}<br/>{{ site.telephone }}{%- endif -%}
+                    {%- if site.address -%}<br/>{{ site.address }}{%- endif -%}
                 </address>
-            {% endif %}
-            {% assign sorted_collections = site.collections | sort: 'position' %}
-            {% for cv_section in sorted_collections %}
-                {% case cv_section.label %}
-                    {% when 'cv_work' %}
+            {%- endif -%}
+            {%- assign sorted_collections = site.collections | sort: 'position' -%}
+            {%- for cv_section in sorted_collections -%}
+                {%- case cv_section.label -%}
+                    {%- when 'cv_work' -%}
                         <section>
                             <h2>Professional Experience</h2>
-                            {% assign display_order = site.cv_work | sort: 'display-order' %}
-                            {% for job in display_order %}
+                            {%- assign display_order = site.cv_work | sort: 'display-order' -%}
+                            {%- for job in display_order -%}
                                 <article>
                                     <h3>
-                                        {% if job.employer-link %}<a href="{{ job.employer-link }}">{{ job.employer }}</a>
-                                        {% else %}{{ job.employer }}
-                                        {% endif %} | {{ job.role }}
+                                        {%- if job.employer-link -%}<a href="{{ job.employer-link }}">{{ job.employer }}</a>
+                                        {%- else -%}{{ job.employer }}
+                                        {%- endif -%} | {{ job.role }}
                                     </h3>
-                                    <h4>{% include job_dates.html %}</h4>
+                                    <h4>
+                                        {% include job_dates.html %}
+                                    </h4>
                                     {{ job.content }}
                                 </article>
-                            {% endfor %}
+                            {%- endfor -%}
                         </section>
-                    {% when 'cv_education' %}
+                    {%- when 'cv_education' -%}
                         <section>
                             <h2>Education</h2>
-                            {% assign display_order = site.cv_education | sort: 'display-order' %}
-                            {% for school in display_order %}
+                            {%- assign display_order = site.cv_education | sort: 'display-order' -%}
+                            {%- for school in display_order -%}
                                 <article>
                                     <h3>
-                                        {% if school.employer-link %}<a href="{{ school.employer-link }}">{{ school.employer }}</a>
-                                        {% else %}{{ school.employer }}
-                                        {% endif %}
-                                        {% if school.role %} | {{ school.role }}
-                                        {% endif %}
+                                        {%- if school.employer-link -%}<a href="{{ school.employer-link }}">{{ school.employer }}</a>
+                                        {%- else -%}{{ school.employer }}
+                                        {%- endif -%}
+                                        {%- if school.role -%} | {{ school.role }}
+                                        {%- endif -%}
                                     </h3>
-                                    <h4><time datetime="{{ school.started }}">{{ school.started }}</time> - <time datetime="{{ school.ended }}">{{ school.ended }}</time></h4>
+                                    <h4>
+                                        <time datetime="{{ school.started }}">{{ school.started }}</time> - <time datetime="{{ school.ended }}">{{ school.ended }}</time>
+                                    </h4>
                                     {{ school.content }}
                                 </article>
-                            {% endfor %}
+                            {%- endfor -%}
                         </section>
-                    {% when 'cv_skills' %}
+                    {%- when 'cv_skills' -%}
                         <section>
                             <h2>Skills</h2>
-                            {% assign display_order = site.cv_skills | sort: 'display-order' %}
-                            {% for skill in display_order %}
+                            {%- assign display_order = site.cv_skills | sort: 'display-order' -%}
+                            {%- for skill in display_order -%}
                                 <article>
-                                    {% if skill.employer %}<h3>{% if skill.employer-link %}<a href="{{ skill.employer-link }}">{{ skill.employer }}</a>{% else %}{{ skill.employer }}{% endif %} | {{ skill.role }}</h3>{% endif %}
+                                    {%- if skill.employer -%}
+                                        <h3>
+                                            {%- if skill.employer-link -%}<a href="{{ skill.employer-link }}">{{ skill.employer }}</a>
+                                            {%- else -%}{{ skill.employer }}
+                                            {%- endif -%} | {{ skill.role }}
+                                        </h3>
+                                    {%- endif -%}
                                     {{ skill.content }}
                                 </article>
-                            {% endfor %}
+                            {%- endfor -%}
                         </section>
-                {% endcase %}
-            {% endfor %}
-        {% endunless %}
+                {%- endcase -%}
+            {%- endfor -%}
+        {%- endunless -%}
     </main>
-{% include after_main.html %}
+{%- include after_main.html -%}
