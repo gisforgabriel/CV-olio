@@ -1,19 +1,36 @@
+{%- capture site-language -%}
+    {%- if site.language -%}
+        {{ site.language }}
+    {%- else -%}
+        en
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- capture page-title -%}
+    {{ site.first_name | append: ' '  }}{{ site.last_name }}{{ page.title | prepend: ' | ' }}
+{%- endcapture -%}
+
+{%- capture meta-robots -%}
+    {%- unless site.seo == true -%}
+    <meta name="robots" content="none">
+    <meta name="robots" content="noarchive">
+    {%- endunless -%}
+    <meta name="robots" content="noodp">
+{%- endcapture -%}
+
 <!DOCTYPE html>
-<html lang="{% if site.language %}{{ site.language }}{% else %}en{% endif %}">
+<html lang="{{ site-language }}">
 <head>
-    <title>{{ site.first_name | append: ' '  }}{{ site.last_name }} | {{ page.title }}</title>
+    <title>{{ page-title }}</title>
     <meta name="description" content="{{ page.description }}">
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    <link rel="shortcut icon" href="{% include favicon.html %}"/>
-    {% unless site.seo == true %}<meta name="robots" content="none">
-    <meta name="robots" content="noarchive">
-    {% endunless %}
-    <meta name="robots" content="noodp">
+    <link rel="shortcut icon" href="{%- include favicon.html -%}"/>
+{{ meta-robots }}
 </head>
 <body>
-{% include icons.svg %}
+{%- include icons.svg -%}
     <header>
-{% include menu.html %}
+{%- include menu.html -%}
     </header>
