@@ -1,0 +1,22 @@
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Website",
+    "creator": {
+        "@type": "Person",
+        "givenName": "{{ site.first_name }}",
+        "familyName": "{{ site.last_name }}",
+        "email": "{{ site.email }}",
+        "telephone": "{{ site.telephone }}",
+        "address": "{{ site.address }}",
+        "url": "{{ site.url }}",
+        "sameAs": "{{ site.github | prepend: 'https://github.com/' }}"
+    },
+    "inLanguage": "{{ site.language }}",
+    "text": "{{ content }}",
+    "description": "{{ description }}",
+    "name": "{{ site.first_name | append: ' '  }}{{ site.last_name | append: ' | ' }}{{ page.title }}",
+    "url": "{{ site.url | append '/cv.html' }}",
+    "dateModified": "{{ site.time }}"
+}
+</script>
