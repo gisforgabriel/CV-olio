@@ -1,15 +1,22 @@
 {% include before_main.html %}
     <main>
-        <h1>
+        {%- capture full-name -%}
             {{ site.first_name | append: ' ' }}{{ site.last_name }}
-        </h1>
+        {%- endcapture -%}
+        <h1>{{ full-name }}</h1>
         {{ content }}
         {%- unless page.name == "404" -%}
             {%- if site.email or site.telephone or site.address -%}
                 <address>
-                    {%- if site.email -%}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{%- endif -%}
-                    {%- if site.telephone -%}<br/>{{ site.telephone }}{%- endif -%}
-                    {%- if site.address -%}<br/>{{ site.address }}{%- endif -%}
+                    {%- if site.email -%}
+                        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                    {%- endif -%}
+                    {%- if site.telephone -%}
+                        {{ site.telephone | prepend: '<br/>' }}
+                    {%- endif -%}
+                    {%- if site.address -%}
+                        {{ site.address | prepend: '<br/>' }}
+                    {%- endif -%}
                 </address>
             {%- endif -%}
             {%- assign sorted_collections = site.collections | sort: 'position' -%}
@@ -20,15 +27,17 @@
                             <h2>Professional Experience</h2>
                             {%- assign display_order = site.cv_work | sort: 'display-order' -%}
                             {%- for job in display_order -%}
+                                {%- capture job-employer-details -%}
+                                    {%- if job.employer-link -%}
+                                        <a href="{{ job.employer-link }}">{{ job.employer }}</a>
+                                    {%- else -%}
+                                        {{ job.employer }}
+                                    {%- endif -%}
+                                    {{ job.role | prepend: ' | ' }}
+                                {%- endcapture -%}
                                 <article>
-                                    <h3>
-                                        {%- if job.employer-link -%}<a href="{{ job.employer-link }}">{{ job.employer }}</a>
-                                        {%- else -%}{{ job.employer }}
-                                        {%- endif -%} | {{ job.role }}
-                                    </h3>
-                                    <h4>
-                                        {% include job_dates.html %}
-                                    </h4>
+                                    <h3>{{ job-employer-details }}</h3>
+                                    <h4>{% include job_dates.html %}</h4>
                                     {{ job.content }}
                                 </article>
                             {%- endfor -%}
@@ -39,16 +48,21 @@
                             {%- assign display_order = site.cv_education | sort: 'display-order' -%}
                             {%- for school in display_order -%}
                                 <article>
-                                    <h3>
-                                        {%- if school.employer-link -%}<a href="{{ school.employer-link }}">{{ school.employer }}</a>
-                                        {%- else -%}{{ school.employer }}
+                                    {%- capture school-employer-details -%}
+                                        {%- if school.employer-link -%}
+                                            <a href="{{ school.employer-link }}">{{ school.employer }}</a>
+                                        {%- else -%}
+                                            {{ school.employer }}
                                         {%- endif -%}
-                                        {%- if school.role -%} | {{ school.role }}
+                                        {%- if school.role -%}
+                                            {{ school.role | prepend: ' | ' }}
                                         {%- endif -%}
-                                    </h3>
-                                    <h4>
+                                    {%- endcapture -%}
+                                    {%- capture school-dates -%}
                                         <time datetime="{{ school.started }}">{{ school.started }}</time> - <time datetime="{{ school.ended }}">{{ school.ended }}</time>
-                                    </h4>
+                                    {%- endcapture -%}
+                                    <h3>{{ school-employer-details }}</h3>
+                                    <h4>{{ school-dates }}</h4>
                                     {{ school.content }}
                                 </article>
                             {%- endfor -%}
@@ -60,11 +74,15 @@
                             {%- for skill in display_order -%}
                                 <article>
                                     {%- if skill.employer -%}
-                                        <h3>
-                                            {%- if skill.employer-link -%}<a href="{{ skill.employer-link }}">{{ skill.employer }}</a>
-                                            {%- else -%}{{ skill.employer }}
-                                            {%- endif -%} | {{ skill.role }}
-                                        </h3>
+                                        {%- capture skill-employer-details -%}
+                                            {%- if skill.employer-link -%}
+                                                <a href="{{ skill.employer-link }}">{{ skill.employer }}</a>
+                                            {%- else -%}
+                                                {{ skill.employer }}
+                                            {%- endif -%}
+                                            {{ skill.role | prepend: ' | ' }}
+                                        {%- endcapture -%}
+                                        <h3>{{ skill-employer-details }}</h3>
                                     {%- endif -%}
                                     {{ skill.content }}
                                 </article>
