@@ -16,7 +16,7 @@
     "text": "{{ content }}",
     "description": "{{ description }}",
     "name": "{{ site.first_name | append: ' '  }}{{ site.last_name | append: ' | ' }}{{ page.title }}",
-    "url": "{{ site.url | append '/cv.html' }}",
+    "url": "{{ site.url | append: '/cv.html' }}",
     "dateModified": "{{ site.time }}"
 }
 </script>
