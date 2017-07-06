@@ -2,15 +2,16 @@
   {%- for page in site.pages -%}
     {%- case page.layout -%}
       {%- when 'standard' -%}
-        <li><a href="{{ site.baseurl }}{{ page.url }}"><span class="bullet">»</span>{{ page.title }}</a></li>
+        <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
       {%- when 'portfolio' -%}
-        <li><a href="{{ site.baseurl }}{{ page.url }}"><span class="bullet">»</span>{{ page.title }}</a></li>
+        <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
     {%- endcase -%}
   {%- endfor -%}
   {%- if site.github -%}
-    <li><a href="https://github.com/{{ site.github }}/"><span class="bullet">»<svg><use xlink:href="#icon-github"/></svg></span></a></li>
+    <li><a href="https://github.com/{{ site.github }}/"><svg><use xlink:href="#icon-github"/></svg></a></li>
   {%- endif -%}
 {%- endcapture -%}
+
         <div class="menu">
             <div class="menu-icon">+</div>
             <nav>
