@@ -59,12 +59,7 @@ $menu-icon-size: 3em;
                 fill: $text-colour;
             }
 
-            .bullet {
-                padding-right: 0.5em;
-            }
-
-            &:hover,
-            &:hover .bullet {
+            &:hover {
                 color: $text-colour;
             }
 
