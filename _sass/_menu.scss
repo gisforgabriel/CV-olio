@@ -17,10 +17,7 @@
         }
 
         svg {
-            width: 1em;
-            height: 1em;
             font-size: 1.618em;
-            line-height: 1.618em;
         }
     }
 
@@ -53,8 +50,6 @@
         
             svg {
                 fill: $decoration-colour;
-                width: 1em;
-                height: 1em;
             }
 
             &:hover svg {
