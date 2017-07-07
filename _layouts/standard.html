@@ -6,6 +6,7 @@
         <h1>{{ full-name }}</h1>
         {{ content }}
         {%- unless page.name == "404" -%}
+{% comment %}ADDRESS{% endcomment %}}
             {%- if site.email or site.telephone or site.address -%}
                 <address>
                     {%- if site.email -%}
@@ -19,6 +20,7 @@
                     {%- endif -%}
                 </address>
             {%- endif -%}
+{% comment %}WORK{% endcomment %}}
             {%- assign sorted_collections = site.collections | sort: 'position' -%}
             {%- for cv_section in sorted_collections -%}
                 {%- case cv_section.label -%}
@@ -42,6 +44,7 @@
                                 </article>
                             {%- endfor -%}
                         </section>
+{% comment %}EDUCATION{% endcomment %}}
                     {%- when 'cv_education' -%}
                         <section>
                             <h2>Education</h2>
@@ -67,6 +70,7 @@
                                 </article>
                             {%- endfor -%}
                         </section>
+{% comment %}SKILLS{% endcomment %}}
                     {%- when 'cv_skills' -%}
                         <section>
                             <h2>Skills</h2>
@@ -90,6 +94,7 @@
                         </section>
                 {%- endcase -%}
             {%- endfor -%}
+{% comment %}STRUCTURED DATA{% endcomment %}}
 {% include cv_structured_data.html %}
         {%- endunless -%}
     </main>
