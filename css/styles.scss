@@ -27,9 +27,9 @@ $pattern-offset: $pattern-size / 4;
 
 // Typography
 $title-font-stack: 'loraregular', serif;
-@import 'title-font';
+@import 'font-title';
 $body-font-stack: 'muliextralight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-@import 'body-font';
+@import 'font-body';
 $font-size-large: 16px;
 $font-size-medium: 14px;
 $font-size-small: 12px;
