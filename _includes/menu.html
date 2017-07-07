@@ -2,18 +2,28 @@
   {%- for page in site.pages -%}
     {%- case page.layout -%}
       {%- when 'standard' -%}
-        <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+        <li>
+          <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+        </li>
       {%- when 'portfolio' -%}
-        <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+        <li>
+          <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+        </li>
     {%- endcase -%}
   {%- endfor -%}
   {%- if site.github -%}
-    <li><a href="https://github.com/{{ site.github }}/"><svg><use xlink:href="#icon-github"/></svg></a></li>
+    <li>
+      <a href="https://github.com/{{ site.github }}/"><svg><use xlink:href="#icon-github"/></svg></a>
+    </li>
   {%- endif -%}
 {%- endcapture -%}
 
         <div class="menu">
-            <div class="menu-icon">+</div>
+            <div class="menu-icon">
+              <svg>
+                <use xlink:href="#icon-plus"/>
+              </svg>
+            </div>
             <nav>
                 <ul>
                 {{ menu-links }}

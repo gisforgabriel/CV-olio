@@ -1,23 +1,26 @@
-$menu-icon-size: 3em;
-
 .menu {
     float: right;
     margin: -2em;
     position: relative;    
     z-index: 2;
+    height: 5em;
 
     .menu-icon {
         float: right;
         display: block;
         text-align: right;
         transition: transform $transition-effect;
-        font-size: $menu-icon-size;
-        line-height: 1em;
-        cursor: default;
         z-index: 3;
         padding {
             right: 0.25em;
             top: 0.25em;
+        }
+
+        svg {
+            width: 1em;
+            height: 1em;
+            font-size: 1.618em;
+            line-height: 1.618em;
         }
     }
 
@@ -36,7 +39,7 @@ $menu-icon-size: 3em;
         transition: display $transition-effect;
         right: 0;
         padding: 0;
-        margin-top: $menu-icon-size;
+        margin-top: 2em;
         background-color: $page-colour;
         z-index: 2;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
