@@ -5,14 +5,14 @@ permalink: sitemap.xml
 <?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for page in site.pages %}
-    {% if page.layout == "standard" or page.layout == "portfolio" %}
+  {%- for page in site.pages -%}
+    {%- if page.layout == "standard" or page.layout == "portfolio" -%}
     <url>
-      <loc>{{ site.url }}{{ page.url }}</loc>
+      <loc>{{ site.url }}{{ site.base url }}{{ page.url }}</loc>
       <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
     </url>
-    {% endif %}
-  {% endfor %}
+    {%- endif -%}
+  {%- endfor -%}
 </urlset> 
