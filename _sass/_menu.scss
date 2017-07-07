@@ -47,22 +47,22 @@
             color: $decoration-colour;
             transition: color $transition-effect, fill $transition-effect;
             width: 100%;
-        
+
             svg {
                 fill: $decoration-colour;
-            }
-
-            &:hover svg {
-                fill: $text-colour;
-            }
-
-            &:hover {
-                color: $text-colour;
             }
 
             a {
                 text-decoration: none;
                 border-bottom: none;
+            }
+
+            &:hover {
+                color: $text-colour;
+
+                svg {
+                fill: $text-colour;
+                }
             }
         }
     }
