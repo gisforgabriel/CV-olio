@@ -18,12 +18,12 @@ ul,
 li,
 address {
     color: $text-colour;
-    margin: 0;
     font: {
         family: $body-font-stack;
         size: 1em;
         weight: normal;
     }
+    margin: 0;
 }
 
 h1 {
@@ -63,7 +63,7 @@ ul {
         line-height: $golden-ratio-1;
     
         ul {
-               padding: 0 $golden-ratio-1;
+            padding: 0 $golden-ratio-1;
         }
     }
 

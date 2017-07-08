@@ -3,13 +3,13 @@
 
     article {
         background: {
-            size: cover;
             position: center top;
+            size: cover;
         }
         height: $golden-ratio-10;
         overflow: hidden;
-        position: relative;
         padding: 1em;
+        position: relative;
         transition: height $transition-effect, filter $transition-effect;
 
         h3,
@@ -19,14 +19,14 @@
         }
 
         h2 {
-            bottom: 0;
             background-color: black;
+            bottom: 0;
             color: white;
             font-size: $golden-ratio-1;
             position: absolute;
             right: 0;
-            text-decoration: none;
             text-align: right;
+            text-decoration: none;
             transition: display $transition-effect;
             z-index: 1;
 
