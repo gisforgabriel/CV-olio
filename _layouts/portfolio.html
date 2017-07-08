@@ -29,12 +29,10 @@
             -->
             {% for item in sorted_items %}
                 <article style="background-image:url(/images/{{ item.path | remove: '_portfolio_items/' | replace: '.md', '.jpg' }});" tabindex="{{ forloop.index | plus: 50 }}">
-                    <h2><a href="{{ item.link }}">{{ item.title }}</a></h2>
-                    <div class="hide-text">
+                    <h2>{{ item.title }}</h2>
                     {% if item.employer %}<h3>{{ item.employer }}</h3>{% endif %}
                     {{ item.content }}
                     {% if item.link %}<p class="portfolio-item-link"><svg><use xlink:href="#icon-link"/></svg> <a href="{{ item.link }}">{% if item.link-text %}{{ item.link-text }}{% else %}{{ item.link }}{% endif %}</a></p>{% endif %}
-                    </div>
                 </article>
             {% endfor %}
         </section>
