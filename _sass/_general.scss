@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    margin: 0 auto;
     background-color: $page-colour;
-    padding: $content-padding;
+    margin: 0 auto;
     max-width: $max-content-width;
+    padding: $content-padding;
 }
 
 h1,
@@ -35,10 +35,10 @@ h1 {
 }
 
 h2 {
+    border-bottom: 0.01em solid $decoration-colour;
     font-size: $golden-ratio-2;
     margin: 0.5em 0 0;
     padding-bottom: 0.1em;
-    border-bottom: 0.01em solid $decoration-colour;
 }
 
 h3 {
@@ -70,17 +70,17 @@ ul {
 }
 
 address {
+    border-left: $decoration-thickness solid $decoration-colour;
+    font-style: normal;
     line-height: $golden-ratio-1;
     margin-left: $golden-ratio-1;
     padding-left: $golden-ratio-1;
-    border-left: $decoration-thickness solid $decoration-colour;
-    font-style: normal;
 }
 
 a {
+    border-bottom: $decoration-thickness dotted $decoration-colour;
     color: inherit;
     text-decoration: initial;
-    border-bottom: $decoration-thickness dotted $decoration-colour;
 
     &:hover {
         border-bottom: $decoration-thickness solid $decoration-colour;
@@ -88,7 +88,7 @@ a {
 }
 
 svg {
+    height: 1em;
     vertical-align: middle;
     width: 1em;
-    height: 1em;
 }

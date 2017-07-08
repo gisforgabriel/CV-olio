@@ -1,20 +1,20 @@
 .menu {
-    float: right;
-    margin: -2em;
-    position: relative;    
-    z-index: 2;
+    float: right;  
     height: 5em;
+    margin: -2em;
+    position: relative;  
+    z-index: 2;
 
     .menu-icon {
-        float: right;
         display: block;
-        text-align: right;
-        transition: transform $transition-effect;
-        z-index: 3;
+        float: right;
         padding {
             right: 0.25em;
             top: 0.25em;
         }
+        text-align: right;
+        transition: transform $transition-effect;
+        z-index: 3;
 
         svg {
             font-size: 1.618em;
@@ -31,20 +31,20 @@
     }
 
     nav {
-        display: none;
-        position: absolute;
-        transition: display $transition-effect;
-        right: 0;
-        padding: 0;
-        margin-top: 2em;
         background-color: $page-colour;
-        z-index: 2;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        display: none;
+        margin-top: 2em;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        transition: display $transition-effect;
+        z-index: 2;
 
         li {
+            color: $decoration-colour;
             font-size: $golden-ratio-1;
             list-style-type: none;
-            color: $decoration-colour;
             transition: color $transition-effect, fill $transition-effect;
             width: 100%;
 
@@ -53,8 +53,8 @@
             }
 
             a {
-                text-decoration: none;
                 border-bottom: none;
+                text-decoration: none;
             }
 
             &:hover {
