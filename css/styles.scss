@@ -16,9 +16,9 @@ html {
 {% else %}
 @import 'patternbolt';
 $pattern-type: '{{ site.pattern-style }}';
-$pattern-size: $golden-ratio-unit * {% if site.pattern-size == empty %}1{% else %}{{ site.pattern-size }}{% endif %};
-$pattern-background-colour: {% if site.pattern-background == empty %}white{% else %}{{ site.pattern-background }}{% endif %};
-$pattern-foreground-colour: {% if site.pattern-foreground == empty %}black{% else %}{{ site.pattern-foreground }}{% endif %};
+$pattern-size: $golden-ratio-unit * {{ site.pattern-size | default: "1" }};
+$pattern-background-colour: {{ site.pattern-background | default: "white" }};
+$pattern-foreground-colour: {{ site.pattern-foreground | default: "black" }};
 $pattern-opacity: 1;
 $pattern-mask: none;
 $pattern-offset: $pattern-size / 4;

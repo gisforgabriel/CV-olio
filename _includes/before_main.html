@@ -1,11 +1,3 @@
-{%- capture site-language -%}
-    {%- if site.language -%}
-        {{ site.language }}
-    {%- else -%}
-        en
-    {%- endif -%}
-{%- endcapture -%}
-
 {%- capture page-title -%}
     {{ site.first_name | append: ' '  }}{{ site.last_name }}{{ page.title | prepend: ' | ' }}
 {%- endcapture -%}
@@ -19,7 +11,7 @@
 {%- endcapture -%}
 
 <!DOCTYPE html>
-<html lang="{{ site-language }}">
+<html lang="{{ site.language | default: "en" }}">
 <head>
     <title>{{ page-title }}</title>
     <meta name="description" content="{{ page.description }}">
