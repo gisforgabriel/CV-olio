@@ -1,4 +1,6 @@
-{% include before_main.html %}
+---
+layout: master
+---
     <main>
         <header>
             <h1>Portfolio</h1>
@@ -28,13 +30,29 @@
             {% endfor %}
             -->
             {% for item in sorted_items %}
+                {% capture link-info %}
+                    {% if item.link %}
+                        <p class="portfolio-item-link">
+                            <svg><use xlink:href="#icon-link"/></svg> <a href="{{ item.link }}">
+                        {% if item.link-text %}
+                            {{ item.link-text }}
+                        {% else %}
+                            {{ item.link }}
+                        {% endif %}</a>
+                    </p>
+                    {% endif %}
+                {% endcapture %}
+                {% capture employer-info %}
+                    {% if item.employer %}
+                        <h3>{{ item.employer }}</h3>
+                    {% endif %}
+                {% endcapture %}
                 <article style="background-image:url(/images/{{ item.path | remove: '_portfolio_items/' | replace: '.md', '.jpg' }});" tabindex="{{ forloop.index | plus: 50 }}">
                     <h2>{{ item.title }}</h2>
-                    {% if item.employer %}<h3>{{ item.employer }}</h3>{% endif %}
+                    {{ employer-info }}
                     {{ item.content }}
-                    {% if item.link %}<p class="portfolio-item-link"><svg><use xlink:href="#icon-link"/></svg> <a href="{{ item.link }}">{% if item.link-text %}{{ item.link-text }}{% else %}{{ item.link }}{% endif %}</a></p>{% endif %}
+                    {{ link-info }}
                 </article>
             {% endfor %}
         </section>
     </main>
-{% include after_main.html %}

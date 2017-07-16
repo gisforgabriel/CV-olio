@@ -1,4 +1,6 @@
-{% include before_main.html %}
+---
+layout: master
+---
     <main>
         {%- capture full-name -%}
             {{ site.first_name | append: ' ' }}{{ site.last_name }}
@@ -98,4 +100,3 @@
 {% include cv_structured_data.html %}
         {%- endunless -%}
     </main>
-{% include after_main.html %}
