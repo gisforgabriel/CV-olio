@@ -1,12 +1,18 @@
+---
+---
+{%- capture app-name -%}
+{{ site.first_name }}{{ site.last_name | prepend: ' ' }}
+{%- endcapture -%}
+
 {
-  "name": "{{ first_name }}{{ last_name | prepend ' ' }}",
-  "short_name": "{{ first_name }}{{ last_name | prepend ' ' }}",
+  "name": "{{ app-name }}",
+  "short_name": "{{ app-name }}",
   "start_url": "/cv.html",
   "display": "fullscreen",
-  "background_color": "{{ pattern-background }}",
-  "theme_color": "{{ pattern-background }}",
-  "description": "CV and portfolio of {{ first_name }}{{ last_name | prepend ' ' }}",
-  "lang": "{{ language }}",
+  "background_color": "{{ site.pattern-background }}",
+  "theme_color": "{{ site.pattern-background }}",
+  "description": "CV and portfolio of {{ app-name }}",
+  "lang": "{{ site.language }}",
   "dir": "ltr",
   ​​"orientation": "portrait-primary"
 }
