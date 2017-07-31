@@ -18,6 +18,7 @@ address: Highgate, London, UK N6 1MP
 
 # Build settings
 exclude: ["ReadMe.md", "Gemfile", "Gemfile.lock", "vendor"]
+include: ["manifest.json"]
 markdown: kramdown
 kramdown:
   auto_ids: false
