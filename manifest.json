@@ -14,5 +14,5 @@
   "description": "CV and portfolio of {{ app-name }}",
   "lang": "{{ site.language }}",
   "dir": "ltr",
-  ​​"orientation": "portrait-primary"
+  "orientation": "portrait-primary"
 }
