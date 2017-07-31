@@ -1,0 +1,12 @@
+{
+  "name": "{{ first_name }}{{ last_name | prepend ' ' }}",
+  "short_name": "{{ first_name }}{{ last_name | prepend ' ' }}",
+  "start_url": "/cv.html",
+  "display": "fullscreen",
+  "background_color": "{{ pattern-background }}",
+  "theme_color": "{{ pattern-background }}",
+  "description": "CV and portfolio of {{ first_name }}{{ last_name | prepend ' ' }}",
+  "lang": "{{ language }}",
+  "dir": "ltr",
+  ​​"orientation": "portrait-primary"
+}
