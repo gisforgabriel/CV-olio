@@ -2,8 +2,8 @@
 baseurl: ""
 url: "https://cv-olio.netlify.com"
 pattern-style: candy-b
-pattern-background: darkslategray
-pattern-foreground: cyan
+pattern-background: indianred
+pattern-foreground: mediumpurple
 pattern-size: 5
 language: en
 #seo: true
