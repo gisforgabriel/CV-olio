@@ -1,4 +1,5 @@
 ---
+layout: null
 ---
 {%- capture app-name -%}
 {{ site.first_name }}{{ site.last_name | prepend: ' ' }}
