@@ -1,11 +1,7 @@
 {%- capture menu-links -%}
   {%- for page in site.pages -%}
     {%- case page.layout -%}
-      {%- when 'standard' -%}
-        <li>
-          <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
-        </li>
-      {%- when 'portfolio' -%}
+      {%- when 'standard' or 'portfolio' -%}
         <li>
           <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
         </li>
@@ -13,20 +9,20 @@
   {%- endfor -%}
   {%- if site.github -%}
     <li>
-      <a href="https://github.com/{{ site.github }}/"><svg><use xlink:href="#icon-github"/></svg></a>
+      <a href="{{ site.github | prepend: "https://github.com/" }}" rel="nofollow" target="_blank"><svg role="img"><use xlink:href="#icon-github"/></svg></a>
     </li>
   {%- endif -%}
 {%- endcapture -%}
 
         <div class="menu">
             <div class="menu-icon">
-              <svg>
+              <svg role="img">
                 <use xlink:href="#icon-plus"/>
               </svg>
             </div>
             <nav>
                 <ul>
-                {{ menu-links }}
+                  {{ menu-links }}
                 </ul>
             </nav>
         </div>
