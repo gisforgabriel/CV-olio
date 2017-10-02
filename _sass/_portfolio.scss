@@ -17,11 +17,13 @@
             font-size: 1em;
             margin: 0;
             padding: 0.5em;
+            display: none;
         }
 
         h2 {
             background-color: invert($portfolio-text-color);
             bottom: 0;
+            display: unset;
             font-size: $golden-ratio-1;
             padding: 0;
             position: absolute;
@@ -53,10 +55,6 @@
             @supports (fill: $portfolio-text-color) {
                 fill: $portfolio-text-color
             }
-        }
-
-        :not(h2) {
-            display: none;
         }
 
         &:hover,
