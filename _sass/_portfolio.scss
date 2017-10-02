@@ -12,18 +12,18 @@
         position: relative;
         transition: height $transition-effect, filter $transition-effect;
 
-        p {
-            color: white;
+        * { 
+            color: $portfolio-text-color;
             font-size: 1em;
             margin: 0;
             padding: 0.5em;
         }
 
         h2 {
-            background-color: black;
+            background-color: invert($portfolio-text-color);
             bottom: 0;
-            color: white;
             font-size: $golden-ratio-1;
+            padding: 0;
             position: absolute;
             right: 0;
             text-align: right;
@@ -50,8 +50,8 @@
         }
 
         svg {
-            @supports (fill: white) {
-                fill: white
+            @supports (fill: $portfolio-text-color) {
+                fill: $portfolio-text-color
             }
         }
 
