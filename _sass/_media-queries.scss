@@ -12,8 +12,8 @@ body {
 @media only screen and (min-width: $screen-medium + 1) {
     body {
         font-size: $font-size-large;
-        padding: $golden-ratio-3;
         min-height: unset;
+        padding: $golden-ratio-3;
     }
 }
 
