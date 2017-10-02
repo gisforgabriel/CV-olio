@@ -4,8 +4,8 @@ $remove-0: 0 !important;
 @media print {
     html {
         background: $remove-none;
-        padding: $remove-0;
         font-size: 12px;
+        padding: $remove-0;
     }
 
     body {
