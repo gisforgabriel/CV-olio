@@ -208,9 +208,9 @@
 //    bottom: 0;
 //    right: 0;
 //    overflow: hidden;
+    background-color: rgba($background-color, $opacity);
     background-image: $background-image;
     background-size: $background-size;
-    background-color: rgba($background-color, $opacity);
 //    content: '';
 //    z-index: -1;
     @if $mask == mask {
