@@ -23,7 +23,7 @@ layout: master
                 {% endcapture %}
                 {% capture employer-info %}
                     {% if item.employer %}
-                        <h3>{{ item.employer }}</h3>
+                        <p class="employer">{{ item.employer }}</p>
                     {% endif %}
                 {% endcapture %}
                 <article style="background-image:url(/images/{{ item.path | remove: '_portfolio_items/' | replace: '.md', '.jpg' }});" tabindex="{{ forloop.index | plus: 50 }}">
