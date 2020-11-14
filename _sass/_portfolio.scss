@@ -2,52 +2,50 @@
     max-width: $max-content-width;
 
     article {
-        background: {
-            position: center top;
-            size: cover;
-        }
-        height: $golden-ratio-10;
+        max-height: $golden-ratio-10;
         overflow: hidden;
-        padding: 1em;
         position: relative;
-        transition: height $transition-effect, filter $transition-effect;
 
-        * { 
+        div {
+            height: $golden-ratio-10;
+            background: {
+                position: center top;
+                size: cover;
+            }
+            filter: grayscale(100%) brightness(50%);
+            transition: filter $transition-effect;
+        }
+
+        div:not {
             color: $portfolio-text-color;
             font-size: 1em;
             margin: 0;
             padding: 0.5em;
-            display: none;
         }
 
         h2 {
             background-color: invert($portfolio-text-color);
+            border: none;
             bottom: 0;
-            display: unset;
             font-size: $golden-ratio-1;
             padding: 0;
             position: absolute;
             right: 0;
             text-align: right;
-            text-decoration: none;
-            transition: display $transition-effect;
-            z-index: 1;
-
-            a {
-                border: none;
-                text-decoration: none;
-            }
         }
 
         .employer {
             font-size: 1.3em;
             line-height: 2em;
-            padding: 0; 
-            
-            &:before {
-                content: "\00BB";
-                padding-left: 0.25em;
-                padding-right: 0.25em;
+            padding: 0;
+        }
+
+        p {
+            padding-top: 0.5em;
+            padding-bottom: 0em;
+
+            &:last-child {
+                margin-bottom: 0.5rem;
             }
         }
 
@@ -57,43 +55,27 @@
             }
         }
 
-        &:hover,
-        &:focus {
-            filter: grayscale(100%) brightness(50%);
-            height: initial;
-            min-height: $golden-ratio-10;
-        
-            .portfolio-item-overlay {
-                opacity: 1;
+        &:hover, &:focus {
+            max-height: unset;
+            transition: max-height $transition-effect;
+
+            *:not(:first-child) {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+
+            div {
+                filter: unset;
             }
 
             h2 {
                 background-color: initial;
                 bottom: initial;
-                margin: 0;
-                padding: 0;
+                line-height: 1.2em;
                 position: initial;
                 right: initial;
                 text-align: initial;
-                text-decoration: initial;
-                z-index: initial;
-            }
-
-            :not(h2) {
-                display: initial;
             }
         }
-    }
-
-    .portfolio-item-overlay {
-        background-image: 
-            linear-gradient(
-            rgba(0, 0, 0, 0.85),
-            rgba(0, 0, 0, 0.85)
-            );
-        height: 100%;
-        opacity: 0;
-        transition: opacity $transition-effect;
-        width: 100%;
     }
 }

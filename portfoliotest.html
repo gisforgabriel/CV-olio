@@ -1,0 +1,24 @@
+--- 
+layout: master 
+--- 
+    <main> 
+        <header> 
+            <h1>Portfolio</h1> 
+            {{ content }} 
+        </header> 
+        <section class="portfolio2"> 
+            {% assign sorted_items = site.portfolio_items | sort: "display-order" %} 
+            {% for item in sorted_items %} 
+                <div class="test"> 
+                    <img src="/images/{{ item.path | remove: '_portfolio_items/' | replace: '.md', '.jpg' }}" alt="{{ item.title }}"> 
+                    <div class="caption">{{ item.title }}</p> 
+                    <div class="text"> 
+                        <h2><a href="{{ item.link }}">{{ item.title }}</a></h2> 
+                        {% if item.employer %}<h3>{{ item.employer }}</h3>{% endif %} 
+                        {{ item.content }} 
+                        {% if item.link %}<p class="portfolio-item-link"><svg><use xlink:href="#icon-link"/></svg> <a href="{{ item.link }}">{% if item.link-text %}{{ item.link-text }}{% else %}{{ item.link }}{% endif %}</a></p>{% endif %} 
+                    </div> 
+                </div> 
+            {% endfor %} 
+        </section> 
+    </main>

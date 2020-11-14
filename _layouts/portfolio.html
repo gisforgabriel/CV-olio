@@ -26,7 +26,8 @@ layout: master
                         <p class="employer">{{ item.employer }}</p>
                     {% endif %}
                 {% endcapture %}
-                <article style="background-image:url(/images/{{ item.path | remove: '_portfolio_items/' | replace: '.md', '.jpg' }});" tabindex="{{ forloop.index | plus: 50 }}">
+                <article tabindex="{{ forloop.index | plus: 50 }}">
+                    <div style="background-image:url(/images/{{ item.path | remove: '_portfolio_items/' | replace: '.md', '.jpg' }});"></div>
                     <h2>{{ item.title }}</h2>
                     {{ employer-info }}
                     {{ item.content }}
